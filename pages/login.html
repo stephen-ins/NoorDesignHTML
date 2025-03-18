@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inscription - Noor Design</title>
+    <title>Connexion - Noor Design</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -143,7 +143,6 @@
             <span>Panier (0)</span>
           </a>
         </div>
-
         <!-- Burger menu pour mobile -->
         <div class="md:hidden">
           <button class="text-gray-600 focus:outline-none">
@@ -171,58 +170,23 @@
         <h1 class="text-4xl font-semibold text-gray-800 mb-2">
           Bienvenue chez Noor Design
         </h1>
-        <p class="text-lg text-gray-600">Créer mon compte client</p>
+        <p class="text-lg text-gray-600">Connectez-vous à votre compte</p>
       </div>
     </div>
 
-    <!-- Registration Section -->
-    <section class="container mx-auto px-6 py-12">
-      <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8">
+    <!-- Login Section -->
+    <section class="container mx-auto px-6 py-16">
+      <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-8">
         <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">
-          Créer un compte
+          Connexion
         </h2>
-        <p class="text-sm text-gray-600 mb-8">
-          Les champs marqués d'un astérisque (*) sont obligatoires.
-        </p>
-        <form class="space-y-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label
-                for="firstname"
-                class="block text-sm font-medium text-gray-700 mb-1"
-                >Prénom *</label
-              >
-              <input
-                type="text"
-                id="firstname"
-                name="firstname"
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
-                placeholder="Votre prénom"
-              />
-            </div>
-            <div>
-              <label
-                for="lastname"
-                class="block text-sm font-medium text-gray-700 mb-1"
-                >Nom *</label
-              >
-              <input
-                type="text"
-                id="lastname"
-                name="lastname"
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
-                placeholder="Votre nom"
-              />
-            </div>
-          </div>
 
+        <form class="space-y-6">
           <div>
             <label
               for="email"
               class="block text-sm font-medium text-gray-700 mb-1"
-              >Email *</label
+              >Adresse e-mail *</label
             >
             <input
               type="email"
@@ -231,156 +195,6 @@
               required
               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
               placeholder="votre@email.com"
-            />
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label
-                for="birthdate"
-                class="block text-sm font-medium text-gray-700 mb-1"
-                >Date d'anniversaire *</label
-              >
-              <input
-                type="date"
-                id="birthdate"
-                name="birthdate"
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
-              />
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1"
-                >Genre *</label
-              >
-              <div class="flex space-x-6 mt-2">
-                <div class="flex items-center">
-                  <input
-                    type="radio"
-                    id="gender_m"
-                    name="gender"
-                    value="M"
-                    required
-                    class="mr-2 focus:ring-2 focus:ring-gold"
-                  />
-                  <label for="gender_m" class="text-sm text-gray-600"
-                    >Masculin</label
-                  >
-                </div>
-                <div class="flex items-center">
-                  <input
-                    type="radio"
-                    id="gender_f"
-                    name="gender"
-                    value="F"
-                    required
-                    class="mr-2 focus:ring-2 focus:ring-gold"
-                  />
-                  <label for="gender_f" class="text-sm text-gray-600"
-                    >Féminin</label
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <label
-              for="address"
-              class="block text-sm font-medium text-gray-700 mb-1"
-              >Adresse *</label
-            >
-            <input
-              type="text"
-              id="address"
-              name="address"
-              required
-              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
-              placeholder="Votre adresse complète"
-            />
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label
-                for="postal_code"
-                class="block text-sm font-medium text-gray-700 mb-1"
-                >Code postal *</label
-              >
-              <input
-                type="text"
-                id="postal_code"
-                name="postal_code"
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
-                placeholder="Votre code postal"
-              />
-            </div>
-
-            <div>
-              <label
-                for="city"
-                class="block text-sm font-medium text-gray-700 mb-1"
-                >Ville *</label
-              >
-              <input
-                type="text"
-                id="city"
-                name="city"
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
-                placeholder="Votre ville"
-              />
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label
-                for="country"
-                class="block text-sm font-medium text-gray-700 mb-1"
-                >Pays *</label
-              >
-              <input
-                type="text"
-                id="country"
-                name="country"
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
-                placeholder="Votre pays"
-              />
-            </div>
-
-            <div>
-              <label
-                for="region"
-                class="block text-sm font-medium text-gray-700 mb-1"
-                >Région *</label
-              >
-              <input
-                type="text"
-                id="region"
-                name="region"
-                required
-                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
-                placeholder="Votre région ou province"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label
-              for="phone"
-              class="block text-sm font-medium text-gray-700 mb-1"
-              >Téléphone *</label
-            >
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
-              placeholder="Votre numéro de téléphone"
             />
           </div>
 
@@ -396,85 +210,101 @@
               name="password"
               required
               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
-              placeholder="Choisissez un mot de passe"
-            />
-            <p class="text-xs text-gray-500 mt-1">
-              Minimum 8 caractères, avec au moins une majuscule, une minuscule
-              et un chiffre
-            </p>
-          </div>
-
-          <div>
-            <label
-              for="password_confirm"
-              class="block text-sm font-medium text-gray-700 mb-1"
-              >Confirmation du mot de passe *</label
-            >
-            <input
-              type="password"
-              id="password_confirm"
-              name="password_confirm"
-              required
-              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
-              placeholder="Confirmez votre mot de passe"
+              placeholder="Votre mot de passe"
             />
           </div>
 
-          <div class="space-y-4">
-            <!-- Mesure conservatoire Newletter --- Reflexion de ma cliente pour la mise en place -->
-            <!-- <div class="flex items-start">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
               <input
                 type="checkbox"
-                id="newsletter"
-                name="newsletter"
-                class="mt-1 mr-2"
+                id="remember"
+                name="remember"
+                class="h-4 w-4 text-gold focus:ring-gold border-gray-300 rounded"
               />
-              <label for="newsletter" class="text-sm text-gray-600">
-                Je souhaite recevoir des informations sur les nouveautés et les
-                offres exclusives
-              </label>
-            </div> -->
-
-            <div class="mt-4 flex items-start">
-              <input
-                type="checkbox"
-                id="terms"
-                name="terms"
-                required
-                class="mt-1 mr-2"
-              />
-              <label for="terms" class="text-sm text-gray-600">
-                J'accepte les
-                <a href="#" class="text-gold hover:underline"
-                  >conditions générales de vente</a
-                >
-                et la
-                <a href="#" class="text-gold hover:underline"
-                  >politique de confidentialité</a
-                >
-                *
+              <label for="remember" class="ml-2 block text-sm text-gray-600">
+                Se souvenir de moi
               </label>
             </div>
+
+            <a href="#" class="text-sm text-gold hover:underline">
+              Mot de passe oublié ?
+            </a>
           </div>
 
           <div>
             <button
               type="submit"
-              class="w-full mt-4 py-3 bg-gold text-white rounded-md hover:bg-gold-dark transition focus:outline-none focus:ring-2 focus:ring-gold focus:ring-opacity-50"
+              class="w-full py-3 bg-gold text-white rounded-md hover:bg-gold-dark transition focus:outline-none focus:ring-2 focus:ring-gold focus:ring-opacity-50"
             >
-              Créer mon compte
+              Se connecter
             </button>
           </div>
-
-          <div class="mt-8 pt-6 border-t border-gray-200 text-center">
-            <p class="text-gray-600">
-              Vous avez déjà un compte ?
-              <a href="login.html" class="text-gold hover:underline"
-                >Connectez-vous ici</a
-              >
-            </p>
-          </div>
         </form>
+
+        <div class="mt-8 pt-6 border-t border-gray-200 text-center">
+          <p class="text-gray-600">
+            Vous n'avez pas encore de compte ?
+            <a href="inscription.html" class="text-gold hover:underline"
+              >Créer un compte</a
+            >
+          </p>
+        </div>
+
+        <!-- Mesure conservatoire -- Social Login -->
+        <!-- <div class="mt-6">
+          <div class="relative">
+            <div class="absolute inset-0 flex items-center">
+              <div class="w-full border-t border-gray-300"></div>
+            </div>
+            <div class="relative flex justify-center text-sm">
+              <span class="px-2 bg-white text-gray-500"
+                >Ou connectez-vous avec</span
+              >
+            </div>
+          </div>
+
+          <div class="mt-6 grid grid-cols-2 gap-3">
+            <a
+              href="#"
+              class="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+            >
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="#"
+              class="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+            >
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.4803 0 3.6453 2.55 1.6953 6.27L5.5653 9.22998C6.6553 6.49998 9.1253 4.75 12.0003 4.75Z"
+                  fill="#EA4335"
+                />
+                <path
+                  d="M23.49 12.275C23.49 11.49 23.415 10.73 23.3 10H12V14.51H18.47C18.18 15.99 17.34 17.25 16.08 18.1L19.945 21.0699C22.2 19.0699 23.49 15.92 23.49 12.275Z"
+                  fill="#4285F4"
+                />
+                <path
+                  d="M5.56499 14.77L1.69499 17.73C3.00499 21.51 7.24499 24 12 24C15.235 24 17.95 22.92 19.945 21.07L16.08 18.1C15.01 18.83 13.62 19.25 12 19.25C9.12499 19.25 6.65499 17.5 5.56499 14.77Z"
+                  fill="#34A853"
+                />
+                <path
+                  d="M12 24C15.235 24 17.95 22.92 19.945 21.07L16.08 18.1C15.01 18.83 13.62 19.25 12 19.25C9.12499 19.25 6.65499 17.5 5.56499 14.77L1.69499 17.73C3.00499 21.51 7.24499 24 12 24Z"
+                  fill="#34A853"
+                />
+                <path
+                  d="M1.69501 6.27L5.56501 9.23C6.65501 6.5 9.12501 4.75 12 4.75C13.77 4.75 15.355 5.36002 16.605 6.54998L20.03 3.125C17.95 1.19 15.235 0 12 0C7.48001 0 3.64501 2.55 1.69501 6.27Z"
+                  fill="#FBBC05"
+                />
+              </svg>
+            </a>
+          </div>
+        </div> -->
       </div>
     </section>
 
@@ -492,7 +322,7 @@
             <h3 class="text-xl font-semibold text-white mb-4">Liens rapides</h3>
             <ul class="space-y-2">
               <li>
-                <a href="/index.html" class="hover:text-gold transition"
+                <a href="../index.html" class="hover:text-gold transition"
                   >Accueil</a
                 >
               </li>
@@ -546,11 +376,9 @@
                   >Boucles d'oreilles</a
                 >
               </li>
-
               <li>
                 <a href="#" class="hover:text-gold transition">Bracelets</a>
               </li>
-
               <li><a href="#" class="hover:text-gold transition">Bagues</a></li>
               <li>
                 <a href="#" class="hover:text-gold transition">Grigris</a>
@@ -559,12 +387,7 @@
           </div>
           <div>
             <h3 class="text-xl font-semibold text-white mb-4">Contact</h3>
-            <p class="leading-relaxed mb-2">
-              <!-- 8 rue Auguste Lepère -->
-              44100 Nantes, France
-            </p>
-            <!-- Mesure conservatoire en attente de ma cliente pour un numéro professionnel -->
-            <!-- <p class="leading-relaxed mb-2">Tél: +33 7 57 53 05 19</p> -->
+            <p class="leading-relaxed mb-2">44100 Nantes, France</p>
             <p class="leading-relaxed mb-2">
               Email:
               <br />
@@ -603,30 +426,22 @@
                 fill="currentColor"
                 class="h-5 w-5"
               >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g
-                  id="SVGRepo_tracerCarrier"
+                  fill="none"
+                  stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="15"
-                    stroke-width="12"
-                  >
-                    <path
-                      d="M50.238 37.67c-2.755 35.056 5.454 102.65 10.204 121.69m0 0c3.204 11.958 24.991 15.612 41.854 1.504m.004.006c22.004-20.527 22.726-53.965 45.439-134.68m-.009-.006c1.766-6.592-2.701-3.395-2.701-3.395-5.883 3.397-5.329 3.899-6.135 4.705m.006 0c-1.128 1.128-3.417 1.34-3.417 1.34-1.512 0-2.62 1.562-2.62 1.562m-.003 0c-12.953 12.953-24.494 69.177-33.362 95.376-2.14 7.983-8.33 19.848-8.33 19.848-3.141-8.374-3.681-92.493-3.681-92.493"
-                      style="paint-order: markers stroke fill"
-                    ></path>
-                    <path
-                      d="M87.49 53.127c0-5.2.453-9.836.453-9.836m0 0c.438-21.124-12.821-17.704-22.559-17.087M50.238 37.67c0-2.079 2.415-8.055 15.145-11.466"
-                      style="paint-order: markers stroke fill"
-                    ></path>
-                  </g>
+                  stroke-miterlimit="15"
+                  stroke-width="12"
+                >
+                  <path
+                    d="M50.238 37.67c-2.755 35.056 5.454 102.65 10.204 121.69m0 0c3.204 11.958 24.991 15.612 41.854 1.504m.004.006c22.004-20.527 22.726-53.965 45.439-134.68m-.009-.006c1.766-6.592-2.701-3.395-2.701-3.395-5.883 3.397-5.329 3.899-6.135 4.705m.006 0c-1.128 1.128-3.417 1.34-3.417 1.34-1.512 0-2.62 1.562-2.62 1.562m-.003 0c-12.953 12.953-24.494 69.177-33.362 95.376-2.14 7.983-8.33 19.848-8.33 19.848-3.141-8.374-3.681-92.493-3.681-92.493"
+                    style="paint-order: markers stroke fill"
+                  ></path>
+                  <path
+                    d="M87.49 53.127c0-5.2.453-9.836.453-9.836m0 0c.438-21.124-12.821-17.704-22.559-17.087M50.238 37.67c0-2.079 2.415-8.055 15.145-11.466"
+                    style="paint-order: markers stroke fill"
+                  ></path>
                 </g>
               </svg>
             </a>
