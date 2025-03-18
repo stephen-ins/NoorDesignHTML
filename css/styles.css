@@ -1,0 +1,124 @@
+/* Variables */
+:root {
+  /* --color-gold: #d4af37;
+  --color-gold-dark: #b8960b;
+  --color-cream: #f8f5e6; */
+
+  /* Couleurs test */
+  --color-gold: #a0a08c;
+  --color-gold-dark: #a0a08c4f;
+  --color-cream: #f8f5e6;
+}
+
+/* Polices personnalisées */
+/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"); */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"); */
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-serif {
+  font-family: "Cinzel", serif;
+}
+
+/* Classes de couleurs personnalisées */
+.text-gold {
+  color: var(--color-gold);
+}
+
+.bg-gold {
+  background-color: var(--color-gold);
+}
+
+.hover\:text-gold:hover {
+  color: var(--color-gold);
+}
+
+.hover\:bg-gold:hover {
+  background-color: var(--color-gold);
+}
+
+.bg-gold-dark {
+  background-color: var(--color-gold-dark);
+}
+
+.hover\:bg-gold-dark:hover {
+  background-color: var(--color-gold-dark);
+}
+
+.border-gold {
+  border-color: var(--color-gold);
+}
+
+.focus\:ring-gold:focus {
+  --tw-ring-color: var(--color-gold);
+}
+
+/* Animations et transitions */
+.transition {
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Styles supplémentaires spécifiques à la bijouterie */
+.product-card:hover img {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+/* Style pour le menu mobile */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+/* Styles pour les boutons d'or */
+.btn-gold {
+  background-color: var(--color-gold);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-gold:hover {
+  background-color: var(--color-gold-dark);
+}
+
+/* Style pour le footer */
+footer a:hover {
+  color: var(--color-gold);
+}
+
+/* Style pour les formulaires */
+input:focus,
+textarea:focus {
+  border-color: var(--color-gold);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+/* Améliorations pour les sections de la page d'accueil */
+.hero-text {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
