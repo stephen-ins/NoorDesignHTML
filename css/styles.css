@@ -159,6 +159,7 @@ textarea:focus {
   width: 12px;
   height: 12px;
   transform: scale(1.2);
+  background-color: #2c2929;
 }
 
 @media (max-width: 768px) {
