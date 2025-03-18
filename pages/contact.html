@@ -30,9 +30,9 @@
           href="../index.html"
           class="flex items-center text-2xl font-serif text-gray-800"
           ><img
-            src="../assets/logo/logo.PNG"
+            src="../assets/logo/LOGOS NOOR_20250317_182433_0000.png"
             alt="Noor Design"
-            class="h-10 mr-2"
+            class="h-10 mr-2 logo-rotate"
           />NOOR DESIGN</a
         >
         <div class="hidden md:flex items-center space-x-8">
@@ -102,6 +102,27 @@
           </a>
 
           <a
+            href="login.html"
+            class="text-gray-600 hover:text-gold transition"
+            title="Se connecter"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+              />
+            </svg>
+          </a>
+
+          <a
             href="panier.html"
             class="flex items-center text-gray-600 hover:text-gold transition"
           >
@@ -144,7 +165,7 @@
     </nav>
 
     <!-- Page Header -->
-    <div class="bg-gray-200 py-16">
+    <div class="color-bg-header py-16">
       <div class="container mx-auto px-6 text-center">
         <h1 class="text-4xl font-semibold text-gray-800 mb-2">Contact</h1>
         <p class="text-lg text-gray-600">
@@ -192,12 +213,14 @@
                   Adresse
                 </h3>
                 <p class="text-gray-600">
-                  8 rue Auguste Lepère<br />44100 Nantes, France
+                  <!-- 8 rue Auguste Lepère  -->
+                  44100 NANTES, Pays de la Loire, France
                 </p>
               </div>
             </div>
 
-            <div class="flex items-start">
+            <!-- Telephone mesure conservatoire selon besoin de ma cliente -->
+            <!-- <div class="flex items-start">
               <div
                 class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mr-4"
               >
@@ -222,7 +245,7 @@
                 </h3>
                 <p class="text-gray-600">+33 7 57 53 05 19</p>
               </div>
-            </div>
+            </div> -->
 
             <div class="flex items-start">
               <div
@@ -245,7 +268,13 @@
               </div>
               <div>
                 <h3 class="text-xl font-semibold text-gray-700 mb-1">Email</h3>
-                <p class="text-gray-600">sav.noordesign@gmail.com</p>
+                <p class="text-gray-600">
+                  <a
+                    href="mailto:sav.noordesign@gmail.com"
+                    class="hover:text-gold transition"
+                    >sav.noordesign@gmail.com</a
+                  >
+                </p>
               </div>
             </div>
 
@@ -339,6 +368,9 @@
           <h2 class="text-3xl font-semibold text-gray-800 mb-6">
             Envoyez-moi un message
           </h2>
+          <p class="text-sm text-gray-600 mb-8">
+            Les champs marqués d'un astérisque (*) sont obligatoires.
+          </p>
           <form class="space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -393,7 +425,7 @@
                 <label
                   for="phone"
                   class="block text-sm font-medium text-gray-700 mb-1"
-                  >Téléphone</label
+                  >Téléphone *</label
                 >
                 <input
                   type="tel"
@@ -474,8 +506,8 @@
       </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="py-12 bg-gray-100">
+    <!-- Map Section -- Mesure conservatoire pour intégrer une carte selon les besoins de la cliente-->
+    <!-- <section class="py-12 bg-gray-100">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-semibold text-center text-gray-800 mb-12">
           Retrouvez-moi
@@ -483,7 +515,6 @@
         <div
           class="w-full h-96 bg-gray-300 rounded-lg shadow-md overflow-hidden"
         >
-          <!-- Vous pouvez remplacer ce div par une iframe Google Maps -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2710.6515086543994!2d-1.5789213846676312!3d47.21212177916014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eea40a9e3d31%3A0x21e8cc904afe25fe!2s8%20Rue%20Auguste%20Lepere%2C%2044100%20Nantes!5e0!3m2!1sfr!2sfr!4v1653832401169!5m2!1sfr!2sfr"
             width="100%"
@@ -496,10 +527,10 @@
           </iframe>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-10">
+    <footer class="color-bg-footer text-gray-300 py-10">
       <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -512,7 +543,7 @@
             <h3 class="text-xl font-semibold text-white mb-4">Liens rapides</h3>
             <ul class="space-y-2">
               <li>
-                <a href="../index.html" class="hover:text-gold transition"
+                <a href="/index.html" class="hover:text-gold transition"
                   >Accueil</a
                 >
               </li>
@@ -524,6 +555,11 @@
               <li>
                 <a href="contact.html" class="hover:text-gold transition"
                   >Contact</a
+                >
+              </li>
+              <li>
+                <a href="inscription.html" class="hover:text-gold transition"
+                  >Connexion</a
                 >
               </li>
               <li>
@@ -568,17 +604,27 @@
 
               <li><a href="#" class="hover:text-gold transition">Bagues</a></li>
               <li>
-                <a href="#" class="hover:text-gold transition">Gri Gri</a>
+                <a href="#" class="hover:text-gold transition">Grigris</a>
               </li>
             </ul>
           </div>
           <div>
             <h3 class="text-xl font-semibold text-white mb-4">Contact</h3>
             <p class="leading-relaxed mb-2">
-              8 rue Auguste Lepère<br />44100 Nantes, France
+              <!-- 8 rue Auguste Lepère -->
+              44100 Nantes, France
             </p>
-            <p class="leading-relaxed mb-2">Tél: +33 7 57 53 05 19</p>
-            <p class="leading-relaxed mb-2">Email: sav.noordesign@gmail.com</p>
+            <!-- Mesure conservatoire en attente de ma cliente pour un numéro professionnel -->
+            <!-- <p class="leading-relaxed mb-2">Tél: +33 7 57 53 05 19</p> -->
+            <p class="leading-relaxed mb-2">
+              Email:
+              <br />
+              <a
+                href="mailto:sav.noordesign@gmail.com"
+                class="hover:text-gold transition"
+                >sav.noordesign@gmail.com</a
+              >
+            </p>
           </div>
         </div>
         <div
