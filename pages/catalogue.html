@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalogue - Noor Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+      <div
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a
+          href="../index.html"
+          class="flex items-center text-2xl font-serif text-gray-800"
+          ><img
+            src="../assets/logo/logo.PNG"
+            alt="Noor Design"
+            class="h-10 mr-2"
+          />NOOR DESIGN</a
+        >
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="../index.html"
+            class="text-gray-600 hover:text-gold transition"
+            >Accueil</a
+          >
+          <a
+            href="catalogue.html"
+            class="text-gray-800 hover:text-gold transition"
+            >Catalogue</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-600 hover:text-gold transition"
+            >Contact</a
+          >
+
+          <!-- Formulaire de recherche -->
+          <form class="relative">
+            <input
+              type="text"
+              placeholder="Rechercher..."
+              class="pl-3 pr-10 py-1 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-gold"
+            />
+            <button
+              type="submit"
+              class="absolute right-0 top-0 mt-1 mr-2 text-gray-600 hover:text-gold"
+              aria-label="Rechercher"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </form>
+
+          <a
+            href="inscription.html"
+            class="text-gray-600 hover:text-gold transition"
+            title="Login"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="panier.html"
+            class="flex items-center text-gray-600 hover:text-gold transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+              />
+            </svg>
+            <span>Panier (0)</span>
+          </a>
+        </div>
+        <!-- Burger menu pour mobile -->
+        <div class="md:hidden">
+          <button class="text-gray-600 focus:outline-none">
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-gray-200 py-16">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl font-semibold text-gray-800 mb-2">Catalogue</h1>
+        <p class="text-lg text-gray-600">
+          Découvrez ma collection exclusive de bijoux artisanaux
+        </p>
+      </div>
+    </div>
+
+    <!-- Catalogue Section -->
+    <div class="container mx-auto px-6 py-12">
+      <!-- Filters and Sorting -->
+      <div class="flex flex-col md:flex-row justify-between mb-10">
+        <!-- Filters -->
+        <div class="flex flex-wrap items-center gap-4 mb-6 md:mb-0">
+          <span class="text-gray-700 font-medium">Filtrer par :</span>
+          <div class="relative">
+            <select
+              class="pl-3 pr-8 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+            >
+              <option value="">Catégorie</option>
+              <option value="colliers">Colliers</option>
+              <option value="bracelets">Bracelets</option>
+              <option value="boucles-oreilles">Boucles d'oreilles</option>
+              <option value="bagues">Bagues</option>
+              <option value="grigri">Gri Gri</option>
+            </select>
+          </div>
+          <div class="relative">
+            <select
+              class="pl-3 pr-8 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+            >
+              <option value="">Prix</option>
+              <option value="0-50">Moins de 50€</option>
+              <option value="50-100">50€ - 100€</option>
+              <option value="100-200">100€ - 200€</option>
+              <option value="200+">Plus de 200€</option>
+            </select>
+          </div>
+          <div class="relative">
+            <select
+              class="pl-3 pr-8 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+            >
+              <option value="">Matériaux</option>
+              <option value="or">Or</option>
+              <option value="argent">Argent</option>
+              <option value="pierres">Pierres précieuses</option>
+              <option value="perles">Perles</option>
+            </select>
+          </div>
+        </div>
+        <!-- Sorting -->
+        <div class="flex items-center">
+          <span class="text-gray-700 font-medium mr-3">Trier par :</span>
+          <select
+            class="pl-3 pr-8 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold text-sm"
+          >
+            <option value="nouveautes">Nouveautés</option>
+            <option value="prix-asc">Prix croissant</option>
+            <option value="prix-desc">Prix décroissant</option>
+            <option value="populaires">Popularité</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+      >
+        <!-- Product 1 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition product-card"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Bague Diamant"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Bague Diamant Éternel
+            </h3>
+            <p class="text-gray-600 mt-2 text-sm">
+              Bague élégante en or blanc 18 carats avec diamant central.
+            </p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-gold font-bold">45 €</span>
+              <a href="produit.html" class="text-gold hover:underline"
+                >Voir détails</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition product-card"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Collier Perle"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Collier Perle de Rosée
+            </h3>
+            <p class="text-gray-600 mt-2 text-sm">
+              Collier en argent 925 avec perle baroque naturelle.
+            </p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-gold font-bold">80 €</span>
+              <a href="produit.html" class="text-gold hover:underline"
+                >Voir détails</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition product-card"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Bracelet Or"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Bracelet Harmonie
+            </h3>
+            <p class="text-gray-600 mt-2 text-sm">
+              Bracelet en or jaune 14 carats avec motifs gravés à la main.
+            </p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-gold font-bold">59 €</span>
+              <a href="produit.html" class="text-gold hover:underline"
+                >Voir détails</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition product-card"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Boucles d'oreilles"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Boucles d'oreilles Cascade
+            </h3>
+            <p class="text-gray-600 mt-2 text-sm">
+              Boucles d'oreilles en argent avec zircons et cristaux de roche.
+            </p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-gold font-bold">65 €</span>
+              <a href="produit.html" class="text-gold hover:underline"
+                >Voir détails</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition product-card"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Pendentif"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Pendentif Étoile Filante
+            </h3>
+            <p class="text-gray-600 mt-2 text-sm">
+              Pendentif en or blanc serti de diamants et saphirs bleus.
+            </p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-gold font-bold">120 €</span>
+              <a href="produit.html" class="text-gold hover:underline"
+                >Voir détails</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition product-card"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Gri Gri Chance"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">Gri Gri Chance</h3>
+            <p class="text-gray-600 mt-2 text-sm">
+              Bracelet porte-bonheur avec perles semi-précieuses et charm doré.
+            </p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-gold font-bold">38 €</span>
+              <a href="produit.html" class="text-gold hover:underline"
+                >Voir détails</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition product-card"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Bague Fleur de Lys"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Bague Fleur de Lys
+            </h3>
+            <p class="text-gray-600 mt-2 text-sm">
+              Bague en argent ciselé avec motif fleur de lys et finition
+              antique.
+            </p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-gold font-bold">52 €</span>
+              <a href="produit.html" class="text-gold hover:underline"
+                >Voir détails</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition product-card"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Collier Multi-rangs"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Collier Multi-rangs
+            </h3>
+            <p class="text-gray-600 mt-2 text-sm">
+              Collier trois rangs avec perles de culture et fermoir en argent.
+            </p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-gold font-bold">95 €</span>
+              <a href="produit.html" class="text-gold hover:underline"
+                >Voir détails</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 9 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition product-card"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Collier Multi-rangs"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Collier Multi-rangs
+            </h3>
+            <p class="text-gray-600 mt-2 text-sm">
+              Collier trois rangs avec perles de culture et fermoir en argent.
+            </p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-gold font-bold">95 €</span>
+              <a href="produit.html" class="text-gold hover:underline"
+                >Voir détails</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex justify-center mt-12">
+        <nav class="inline-flex rounded-md shadow">
+          <a
+            href="#"
+            class="py-2 px-4 bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 rounded-l-md"
+            >Précédent</a
+          >
+          <a href="#" class="py-2 px-4 bg-gold text-white border border-gold"
+            >1</a
+          >
+          <a
+            href="#"
+            class="py-2 px-4 bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
+            >2</a
+          >
+          <a
+            href="#"
+            class="py-2 px-4 bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
+            >3</a
+          >
+          <a
+            href="#"
+            class="py-2 px-4 bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 rounded-r-md"
+            >Suivant</a
+          >
+        </nav>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-10">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Noor Design</h3>
+            <p class="leading-relaxed">
+              Des créations exclusives pour des moments inoubliables.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Liens rapides</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="../index.html" class="hover:text-gold transition"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a href="catalogue.html" class="hover:text-gold transition"
+                  >Catalogue</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-gold transition"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition"
+                  >Conditions générales de ventes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition"
+                  >Politique de remboursement</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition"
+                  >Politique de confidentialité</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition"
+                  >Mentions légales</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">
+              Nos collections
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-gold transition">Colliers</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition"
+                  >Boucles d'oreilles</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition">Bracelets</a>
+              </li>
+              <li><a href="#" class="hover:text-gold transition">Bagues</a></li>
+              <li>
+                <a href="#" class="hover:text-gold transition">Gri Gri</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Contact</h3>
+            <p class="leading-relaxed mb-2">
+              8 rue Auguste Lepère<br />44100 Nantes, France
+            </p>
+            <p class="leading-relaxed mb-2">Tél: +33 7 57 53 05 19</p>
+            <p class="leading-relaxed mb-2">Email: sav.noordesign@gmail.com</p>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p>© 2025 Noor Design. Tous droits réservés.</p>
+
+          <div class="flex space-x-4 mt-4 md:mt-0">
+            <a href="#" class="text-gray-300 hover:text-gold transition">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+
+            <a href="#" class="text-gray-300 hover:text-gold transition">
+              <svg
+                viewBox="0 0 192 192"
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+                fill="currentColor"
+                class="h-5 w-5"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="15"
+                  stroke-width="12"
+                >
+                  <path
+                    d="M50.238 37.67c-2.755 35.056 5.454 102.65 10.204 121.69m0 0c3.204 11.958 24.991 15.612 41.854 1.504m.004.006c22.004-20.527 22.726-53.965 45.439-134.68m-.009-.006c1.766-6.592-2.701-3.395-2.701-3.395-5.883 3.397-5.329 3.899-6.135 4.705m.006 0c-1.128 1.128-3.417 1.34-3.417 1.34-1.512 0-2.62 1.562-2.62 1.562m-.003 0c-12.953 12.953-24.494 69.177-33.362 95.376-2.14 7.983-8.33 19.848-8.33 19.848-3.141-8.374-3.681-92.493-3.681-92.493"
+                    style="paint-order: markers stroke fill"
+                  ></path>
+                  <path
+                    d="M87.49 53.127c0-5.2.453-9.836.453-9.836m0 0c.438-21.124-12.821-17.704-22.559-17.087M50.238 37.67c0-2.079 2.415-8.055 15.145-11.466"
+                    style="paint-order: markers stroke fill"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
