@@ -22,7 +22,7 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body class="bg-gray-50 font-sans">
+  <body class="bg-white">
     <!-- Navigation -->
     <nav class="bg-white shadow-md">
       <div
@@ -123,6 +123,27 @@
           </a>
 
           <a
+            href="#"
+            class="text-gray-600 hover:text-gold transition"
+            title="Se déconnecter"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+              />
+            </svg>
+          </a>
+
+          <a
             href="pages/panier.html"
             class="flex items-center text-gray-600 hover:text-gold transition"
           >
@@ -214,24 +235,30 @@
             </h2>
             <p class="text-gray-600 leading-relaxed mb-4">
               Miroir de mon esprit bohème chic, je confectionne mes bijoux en
-              suivant mon inspiration, allant spontanément vers des couleurs et
-              des matières qui m'attirent , sans me préoccuper des tendances du
-              moment. Chaque bijoux est une invitation au voyage. Embarquement
-              immédiat vers des destinations de rêve, teintées de soleil, de
-              sérénité, de bonne humeur ... et d’un soupçon de magie !
-            </p>
-            <p class="text-gray-600 leading-relaxed mb-4">
-              Le mélange des matières est le maître mot de mes créations :
-              j’assemble pierres semi-précieuses, nacre, et coquillages avec
-              minutie, pour vous proposer des parures ensoleillées 🌞 Je
-              sélectionne avec le plus grand soin chaque matériau, en France,
+              suivant mon inspiration, sans me préoccuper des tendances du
+              moment. <br />Le mélange des matières est le maître mot de mes
+              créations : j’assemble pierres semi-précieuses, nacre, et
+              coquillages avec minutie, pour vous proposer des parures
+              ensoleillées 🌞. <br />
+              Je sélectionne avec le plus grand soin chaque matériau, en France,
               pour façonner un dialogue singulier avec la peau.
             </p>
-            <a
+            <p class="text-gray-600 leading-relaxed mb-8">
+              Bienvenue dans l'univers de Noor Design. Chaque bijou est une
+              invitation au voyage. Embarquement immédiat vers des destinations
+              de rêve, teintées de soleil, de sérénité, de bonne humeur ... et
+              d’un soupçon de magie !
+            </p>
+            <p class="italic text-xl mb-6 font-serif text-right">
+              Anne-Laure, Fondatrice
+            </p>
+
+            <!-- Mesure conservatoire pour intégrer certainement un page blog -->
+            <!-- <a
               href="#"
               class="inline-block border-2 border-gold text-gold px-6 py-3 rounded-md hover:bg-gold hover:text-white transition"
               >Découvrir mon histoire</a
-            >
+            > -->
           </div>
         </div>
       </div>
@@ -239,7 +266,7 @@
     <!-- Featured Products -->
     <section class="container mx-auto px-6 py-12">
       <h2 class="text-3xl font-semibold text-center text-gray-800 mb-12">
-        Mes créations populaires
+        Mes créations iconiques
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Product 1 -->
@@ -432,7 +459,7 @@
     <section class="py-16 color-bg-header">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-semibold text-center text-gray-800 mb-12">
-          Ce que nos clients disent
+          Vos mots doux
         </h2>
 
         <div class="relative testimonial-carousel">
@@ -599,9 +626,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 class="text-xl font-semibold text-white mb-4">Noor Design</h3>
-            <p class="leading-relaxed">
-              Des créations exclusives pour des moments inoubliables.
-            </p>
+            <p class="leading-relaxed">Faites briller votre âme plus fort.</p>
           </div>
           <div>
             <h3 class="text-xl font-semibold text-white mb-4">Liens rapides</h3>
@@ -631,9 +656,7 @@
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-gold transition"
-                  >Conditions générales de ventes</a
-                >
+                <a href="#" class="hover:text-gold transition">C.G.V</a>
               </li>
               <li>
                 <a href="#" class="hover:text-gold transition"
@@ -672,7 +695,7 @@
 
               <li><a href="#" class="hover:text-gold transition">Bagues</a></li>
               <li>
-                <a href="#" class="hover:text-gold transition">Grigris</a>
+                <a href="#" class="hover:text-gold transition">Grigris Noor</a>
               </li>
             </ul>
           </div>
@@ -685,8 +708,6 @@
             <!-- Mesure conservatoire en attente de ma cliente pour un numéro professionnel -->
             <!-- <p class="leading-relaxed mb-2">Tél: +33 7 57 53 05 19</p> -->
             <p class="leading-relaxed mb-2">
-              Email:
-              <br />
               <a
                 href="mailto:sav.noordesign@gmail.com"
                 class="hover:text-gold transition"
@@ -696,11 +717,13 @@
           </div>
         </div>
         <div
-          class="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center"
+          class="border-t mt-8 pt-6 flex flex-col md:flex-row justify-between items-center"
+          style="border-color: var(--color-bg-header)"
         >
           <p>© 2025 Noor Design. Tous droits réservés.</p>
 
           <div class="flex space-x-4 mt-4 md:mt-0">
+            <!-- Social media INSTAGRAM -->
             <a href="#" class="text-gray-300 hover:text-gold transition">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -714,7 +737,8 @@
               </svg>
             </a>
 
-            <a href="#" class="text-gray-300 hover:text-gold transition">
+            <!-- Mesure conservatoire -Vinted- -->
+            <!-- <a href="#" class="text-gray-300 hover:text-gold transition">
               <svg
                 viewBox="0 0 192 192"
                 xmlns="http://www.w3.org/2000/svg"
@@ -748,7 +772,7 @@
                   </g>
                 </g>
               </svg>
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
@@ -765,11 +789,11 @@
         const indicators = document.querySelectorAll(".indicator");
         let currentIndex = 0;
 
-        // Function to update slider position
+        // Fonction pour mettre à jour le carrousel
         function updateSlider() {
           slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-          // Update indicators
+          // Mettre à jour les indicateurs
           indicators.forEach((indicator, index) => {
             if (index === currentIndex) {
               indicator.classList.add("bg-gold", "active-indicator");
@@ -781,7 +805,7 @@
           });
         }
 
-        // Set up event listeners for buttons
+        // Evenements pour les boutons précédent et suivant
         prevBtn.addEventListener("click", () => {
           currentIndex = (currentIndex - 1 + 3) % 3;
           updateSlider();
@@ -792,7 +816,7 @@
           updateSlider();
         });
 
-        // Evenement pour les indicateurs
+        // Evenements pour les indicateurs.
         indicators.forEach((indicator) => {
           indicator.addEventListener("click", () => {
             currentIndex = parseInt(indicator.dataset.index);
