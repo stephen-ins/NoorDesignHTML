@@ -1,17 +1,17 @@
 /* Variables */
 :root {
   /* Couleurs de base */
-  --color-gold: #a0a08c;
+  --color-gold: #c4c4ba;
   --color-gold-dark: #a0a08c4f;
-  --color-cream: #f8f5e6;
-  --color-bg-footer: #2c2929;
-  --color-bg-header: #a0a08c;
+  --color-cream: #ffffff;
+  --color-bg-footer: #171616;
+  --color-bg-header: #c4c4ba;
 }
 
 /* Polices personnalisées */
-/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap");
 
-/* @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap");
 
 body {
   font-family: "Raleway", sans-serif;
@@ -77,18 +77,18 @@ h4,
 }
 
 /* Rotation infinie du logo Noor Design */
-@keyframes logo-rotate {
+/* @keyframes logo-rotate {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(180deg);
   }
-}
+} */
 
-.logo-rotate {
+/* .logo-rotate {
   animation: logo-rotate 8s linear infinite;
-}
+} */
 
 /* Styles supplémentaires spécifiques à la bijouterie */
 .product-card:hover img {
