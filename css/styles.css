@@ -226,6 +226,6 @@ textarea:focus {
 }
 
 .quantity-input {
+	appearance: textfield;
 	-moz-appearance: textfield;
 }
-
