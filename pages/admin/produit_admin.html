@@ -1,864 +1,454 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Administration des Produits - NoorDesign</title>
-	<script src="https://cdn.tailwindcss.com"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body class="bg-gray-100">
-<div class="w-full">
-	<div class="flex">
-		<!-- Sidebar -->
-		<nav class="hidden md:block md:w-1/4 lg:w-1/6 bg-gray-800 min-h-screen">
-			<div class="sticky top-0 pt-3">
-				<div class="text-center mb-4">
-					<img src="../img/logo-noordesign.png" alt="NoorDesign Logo" class="max-w-[150px] mx-auto">
-				</div>
-				<ul class="flex flex-col">
-					<li class="mb-1">
-						<a class="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 rounded" href="dashboard.html">
-							<i class="fas fa-tachometer-alt mr-2"></i> Tableau de bord
-						</a>
-					</li>
-					<li class="mb-1">
-						<a class="flex items-center px-4 py-2 bg-gray-700 text-white rounded" href="produit_admin.html">
-							<i class="fas fa-box mr-2"></i> Produits
-						</a>
-					</li>
-					<li class="mb-1">
-						<a class="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 rounded" href="commande_admin.html">
-							<i class="fas fa-shopping-cart mr-2"></i> Commandes
-						</a>
-					</li>
-					<li class="mb-1">
-						<a class="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 rounded" href="client_admin.html">
-							<i class="fas fa-users mr-2"></i> Clients
-						</a>
-					</li>
-					<li class="mb-1">
-						<a class="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 rounded" href="categorie_admin.html">
-							<i class="fas fa-tags mr-2"></i> Catégories
-						</a>
-					</li>
-					<li class="mt-5">
-						<a class="flex items-center px-4 py-2 text-red-500 hover:bg-gray-700 rounded" href="../../index.html">
-							<i class="fas fa-sign-out-alt mr-2"></i> Déconnexion
-						</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Bijouterie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../../styles/admin.css" />
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex">
+      <!-- Sidebar -->
+      <nav id="sidebar" class="hidden md:block w-64 bg-gray-800 min-h-screen">
+        <div class="sticky top-0 p-4">
+          <div class="text-center mb-6">
+            <h4 class="text-white text-xl font-semibold">Noor Design</h4>
+            <p class="text-gray-400">Administration</p>
+          </div>
+          <ul class="space-y-2">
+            <li>
+              <a
+                class="flex items-center text-white bg-blue-600 px-4 py-2 rounded"
+                href="#"
+              >
+                <i class="bi bi-house-door mr-2"></i>
+                Tableau de bord
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center text-gray-300 hover:bg-gray-700 px-4 py-2 rounded"
+                href="#"
+              >
+                <i class="bi bi-gem mr-2"></i>
+                Produits
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center text-gray-300 hover:bg-gray-700 px-4 py-2 rounded"
+                href="#"
+              >
+                <i class="bi bi-box-seam mr-2"></i>
+                Commandes
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center text-gray-300 hover:bg-gray-700 px-4 py-2 rounded"
+                href="#"
+              >
+                <i class="bi bi-people mr-2"></i>
+                Clients
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center text-gray-300 hover:bg-gray-700 px-4 py-2 rounded"
+                href="#"
+              >
+                <i class="bi bi-bar-chart mr-2"></i>
+                Rapports
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center text-gray-300 hover:bg-gray-700 px-4 py-2 rounded"
+                href="#"
+              >
+                <i class="bi bi-tags mr-2"></i>
+                Promotions
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center text-gray-300 hover:bg-gray-700 px-4 py-2 rounded"
+                href="#"
+              >
+                <i class="bi bi-gear mr-2"></i>
+                Paramètres
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-		<!-- Main content -->
-		<main class="w-full md:w-3/4 lg:w-5/6 p-4">
-			<div class="flex justify-between flex-wrap items-center pt-3 pb-2 mb-3 border-b">
-				<h1 class="text-2xl font-bold">Gestion des Produits</h1>
-				<div>
-					<button class="inline-flex items-center px-3 py-2 mr-2 border border-gray-400 rounded text-gray-700 hover:bg-gray-100" data-bs-toggle="modal" data-bs-target="#importExportModal">
-						<i class="fas fa-file-import mr-2"></i>Import/Export
-					</button>
-					<button class="inline-flex items-center px-3 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" data-bs-toggle="modal" data-bs-target="#addProductModal">
-						<i class="fas fa-plus mr-2"></i>Nouveau Produit
-					</button>
-				</div>
-			</div>
+      <!-- Main content -->
+      <main class="flex-1 p-6">
+        <div class="flex justify-between items-center border-b pb-4 mb-6">
+          <h1 class="text-2xl font-semibold">Gestion des produits</h1>
+          <button
+            class="bg-blue-600 text-white px-4 py-2 rounded flex items-center"
+          >
+            <i class="bi bi-plus mr-2"></i> Ajouter un produit
+          </button>
+        </div>
 
-			<!-- Filters and search -->
-			<div class="flex flex-col md:flex-row mb-4 gap-2">
-				<div class="w-full md:w-1/4">
-					<select class="w-full p-2 border border-gray-300 rounded" id="categoryFilter">
-						<option value="">Toutes les catégories</option>
-						<option value="1">Bijoux</option>
-						<option value="2">Accessoires</option>
-						<option value="3">Vêtements</option>
-					</select>
-				</div>
-				<div class="w-full md:w-1/4">
-					<select class="w-full p-2 border border-gray-300 rounded" id="statusFilter">
-						<option value="">Tous les statuts</option>
-						<option value="active">Actif</option>
-						<option value="inactive">Inactif</option>
-					</select>
-				</div>
-				<div class="w-full md:w-1/2">
-					<div class="flex">
-						<input type="text" class="w-full p-2 border border-gray-300 rounded-l" placeholder="Rechercher un produit...">
-						<button class="px-3 py-2 border border-l-0 border-gray-300 bg-gray-100 rounded-r hover:bg-gray-200" type="button">
-							<i class="fas fa-search"></i>
-						</button>
-					</div>
-				</div>
-			</div>
+        <!-- Filters & Search -->
+        <div class="bg-white p-4 rounded-lg shadow-sm mb-6">
+          <div class="flex flex-wrap gap-4">
+            <div class="flex-1 min-w-[200px]">
+              <input
+                type="text"
+                placeholder="Rechercher un produit..."
+                class="w-full px-4 py-2 border rounded"
+              />
+            </div>
+            <div class="w-40">
+              <select class="w-full px-4 py-2 border rounded">
+                <option value="">Catégorie</option>
+                <option value="bagues">Bagues</option>
+                <option value="colliers">Colliers</option>
+                <option value="bracelets">Bracelets</option>
+                <option value="boucles">Boucles d'oreilles</option>
+              </select>
+            </div>
+            <div class="w-40">
+              <select class="w-full px-4 py-2 border rounded">
+                <option value="">Statut</option>
+                <option value="en_stock">En stock</option>
+                <option value="epuise">Épuisé</option>
+              </select>
+            </div>
+            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded">
+              Filtrer
+            </button>
+          </div>
+        </div>
 
-			<!-- Bulk actions -->
-			<div class="flex flex-col md:flex-row mb-3">
-				<div class="w-full md:w-1/2">
-					<div class="relative inline-block text-left">
-						<button id="bulkActionDropdown" type="button" class="px-3 py-2 border border-gray-300 rounded inline-flex items-center" onclick="document.getElementById('bulkActionMenu').classList.toggle('hidden')">
-							Actions en masse
-							<i class="fas fa-caret-down ml-2"></i>
-						</button>
-						<div id="bulkActionMenu" class="hidden absolute left-0 mt-2 w-48 bg-white shadow-lg rounded z-10 border">
-							<a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#" id="bulkActivate">Activer</a>
-							<a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#" id="bulkDeactivate">Désactiver</a>
-							<a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#" id="bulkPromote">Ajouter à une promotion</a>
-							<div class="border-t my-1"></div>
-							<a class="block px-4 py-2 text-red-600 hover:bg-gray-100" href="#" id="bulkDelete">Supprimer</a>
-						</div>
-					</div>
-				</div>
-				<div class="w-full md:w-1/2 text-right mt-2 md:mt-0">
-					<span class="selected-count">0 produit(s) sélectionné(s)</span>
-				</div>
-			</div>
-
-			<!-- Products table -->
-			<div class="overflow-x-auto shadow rounded-lg">
-				<table class="min-w-full divide-y divide-gray-200">
-					<thead class="bg-gray-50">
-					<tr>
-						<th scope="col" class="p-4 text-left">
-							<div class="flex items-center">
-								<input class="w-4 h-4" type="checkbox" id="selectAllProducts">
-							</div>
-						</th>
-						<th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
-						<th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Image</th>
-						<th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nom</th>
-						<th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Catégorie</th>
-						<th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Prix</th>
-						<th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stock</th>
-						<th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Statut</th>
-						<th scope="col" class="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
-					</tr>
-					</thead>
-					<tbody class="bg-white divide-y divide-gray-200">
-					<tr class="hover:bg-gray-50">
-						<td class="p-4">
-							<div class="flex items-center">
-								<input class="w-4 h-4 product-checkbox" type="checkbox" value="001">
-							</div>
-						</td>
-						<td class="p-4 whitespace-nowrap">001</td>
-						<td class="p-4 whitespace-nowrap"><img src="../img/product1.jpg" alt="Produit 1" class="h-12 w-12 object-cover rounded"></td>
-						<td class="p-4 whitespace-nowrap">Collier Étoile</td>
-						<td class="p-4 whitespace-nowrap">Bijoux</td>
-						<td class="p-4 whitespace-nowrap">39,99 €</td>
-						<td class="p-4 whitespace-nowrap">15</td>
-						<td class="p-4 whitespace-nowrap"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-500 text-white">Actif</span></td>
-						<td class="p-4 whitespace-nowrap">
-							<button class="p-1 text-yellow-600 hover:bg-yellow-100 rounded mr-1" data-bs-toggle="modal" data-bs-target="#editProductModal">
-								<i class="fas fa-edit"></i>
-							</button>
-							<button class="p-1 text-red-600 hover:bg-red-100 rounded mr-1" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
-								<i class="fas fa-trash"></i>
-							</button>
-							<button class="p-1 text-blue-600 hover:bg-blue-100 rounded" data-bs-toggle="modal" data-bs-target="#promoProductModal">
-								<i class="fas fa-tag"></i>
-							</button>
-						</td>
-					</tr>
-					<tr class="hover:bg-gray-50">
-						<td class="p-4">
-							<div class="flex items-center">
-								<input class="w-4 h-4 product-checkbox" type="checkbox" value="002">
-							</div>
-						</td>
-						<td class="p-4 whitespace-nowrap">002</td>
-						<td class="p-4 whitespace-nowrap"><img src="../img/product2.jpg" alt="Produit 2" class="h-12 w-12 object-cover rounded"></td>
-						<td class="p-4 whitespace-nowrap">Bracelet Floral</td>
-						<td class="p-4 whitespace-nowrap">Bijoux</td>
-						<td class="p-4 whitespace-nowrap"><span class="line-through mr-1">29,99 €</span> <span class="text-red-600 font-bold">24,99 €</span></td>
-						<td class="p-4 whitespace-nowrap">8</td>
-						<td class="p-4 whitespace-nowrap"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-500 text-white">Actif</span></td>
-						<td class="p-4 whitespace-nowrap">
-							<button class="p-1 text-yellow-600 hover:bg-yellow-100 rounded mr-1" data-bs-toggle="modal" data-bs-target="#editProductModal">
-								<i class="fas fa-edit"></i>
-							</button>
-							<button class="p-1 text-red-600 hover:bg-red-100 rounded mr-1" data-bs-toggle="modal" data-bs-target="#deleteConfirmModal">
-								<i class="fas fa-trash"></i>
-							</button>
-							<button class="p-1 text-blue-600 hover:bg-blue-100 rounded" data-bs-toggle="modal" data-bs-target="#promoProductModal">
-								<i class="fas fa-tag"></i>
-							</button>
-						</td>
-					</tr>
-					<tr class="hover:bg-gray-50">
-						<td class="p-4">
-							<div class="flex items-center">
-								<input class="w-4 h-4 product-checkbox" type="checkbox" value="003">
-							</div>
-						</td>
-						<td class="p-4 whitespace-nowrap">003</td>
-						<td class="p-4 whitespace-nowrap"><img src="../img/product3.jpg" alt="Produit 3" class="h-12 w-12 object-cover rounded"></td>
-						<td class="p-4 whitespace-nowrap">Foulard Soie</td>
-						<td class="p-4 whitespace-nowrap">Accessoires</td>
-						<td class="p-4 whitespace-nowrap">45,99 €</td>
-						<td class="p-4 whitespace-nowrap">0</td>
-						<td class="p-4 whitespace-nowrap"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-red-500 text-white">Rupture</span></td>
-						<td class="p-4 whitespace-nowrap">
-							<button class="p-1 text-yellow-600 hover:bg-yellow-100 rounded mr-1" data-bs-toggle="modal" data-bs-target="#editProductModal">
-								<i class="fas fa-edit"></i>
-							</button>
-							<button class="p-1 text-red-600 hover:bg-red-100 rounded">
-								<i class="fas fa-trash"></i>
-							</button>
-						</td>
-					</tr>
-					<tr class="hover:bg-gray-50">
-						<td class="p-4">
-							<div class="flex items-center">
-								<input class="w-4 h-4 product-checkbox" type="checkbox" value="004">
-							</div>
-						</td>
-						<td class="p-4 whitespace-nowrap">004</td>
-						<td class="p-4 whitespace-nowrap"><img src="../img/product4.jpg" alt="Produit 4" class="h-12 w-12 object-cover rounded"></td>
-						<td class="p-4 whitespace-nowrap">Robe Brodée</td>
-						<td class="p-4 whitespace-nowrap">Vêtements</td>
-						<td class="p-4 whitespace-nowrap">89,99 €</td>
-						<td class="p-4 whitespace-nowrap">5</td>
-						<td class="p-4 whitespace-nowrap"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-500 text-white">Actif</span></td>
-						<td class="p-4 whitespace-nowrap">
-							<button class="p-1 text-yellow-600 hover:bg-yellow-100 rounded mr-1" data-bs-toggle="modal" data-bs-target="#editProductModal">
-								<i class="fas fa-edit"></i>
-							</button>
-							<button class="p-1 text-red-600 hover:bg-red-100 rounded">
-								<i class="fas fa-trash"></i>
-							</button>
-						</td>
-					</tr>
-					<tr class="hover:bg-gray-50">
-						<td class="p-4">
-							<div class="flex items-center">
-								<input class="w-4 h-4 product-checkbox" type="checkbox" value="005">
-							</div>
-						</td>
-						<td class="p-4 whitespace-nowrap">005</td>
-						<td class="p-4 whitespace-nowrap"><img src="../img/product5.jpg" alt="Produit 5" class="h-12 w-12 object-cover rounded"></td>
-						<td class="p-4 whitespace-nowrap">Sac à Main Oriental</td>
-						<td class="p-4 whitespace-nowrap">Accessoires</td>
-						<td class="p-4 whitespace-nowrap">59,99 €</td>
-						<td class="p-4 whitespace-nowrap">12</td>
-						<td class="p-4 whitespace-nowrap"><span class="px-2 py-1 text-xs font-semibold rounded-full bg-gray-500 text-white">Inactif</span></td>
-						<td class="p-4 whitespace-nowrap">
-							<button class="p-1 text-yellow-600 hover:bg-yellow-100 rounded mr-1" data-bs-toggle="modal" data-bs-target="#editProductModal">
-								<i class="fas fa-edit"></i>
-							</button>
-							<button class="p-1 text-red-600 hover:bg-red-100 rounded">
-								<i class="fas fa-trash"></i>
-							</button>
-						</td>
-					</tr>
-					</tbody>
-				</table>
-			</div>
-
-			<!-- Pagination -->
-			<nav class="mt-4" aria-label="Page navigation">
-				<ul class="flex justify-center">
-					<li class="mx-1 opacity-50 cursor-not-allowed">
-						<a class="px-3 py-2 bg-white border rounded" href="#" tabindex="-1">Précédent</a>
-					</li>
-					<li class="mx-1"><a class="px-3 py-2 bg-blue-600 text-white border rounded" href="#">1</a></li>
-					<li class="mx-1"><a class="px-3 py-2 bg-white border rounded hover:bg-gray-100" href="#">2</a></li>
-					<li class="mx-1"><a class="px-3 py-2 bg-white border rounded hover:bg-gray-100" href="#">3</a></li>
-					<li class="mx-1">
-						<a class="px-3 py-2 bg-white border rounded hover:bg-gray-100" href="#">Suivant</a>
-					</li>
-				</ul>
-			</nav>
-		</main>
-	</div>
-</div>
-
-<!-- Add Product Modal -->
-<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="addProductModalLabel">Ajouter un Produit</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<form id="addProductForm">
-					<div class="row mb-3">
-						<div class="col-md-6">
-							<label for="productName" class="form-label">Nom du produit</label>
-							<input type="text" class="form-control" id="productName" required>
-						</div>
-						<div class="col-md-6">
-							<label for="productCategory" class="form-label">Catégorie</label>
-							<select class="form-select" id="productCategory" required>
-								<option value="">Sélectionner une catégorie</option>
-								<option value="1">Bijoux</option>
-								<option value="2">Accessoires</option>
-								<option value="3">Vêtements</option>
-							</select>
-						</div>
-					</div>
-					<div class="row mb-3">
-						<div class="col-md-4">
-							<label for="productPrice" class="form-label">Prix (€)</label>
-							<input type="number" step="0.01" class="form-control" id="productPrice" required>
-						</div>
-						<div class="col-md-4">
-							<label for="productStock" class="form-label">Stock</label>
-							<input type="number" class="form-control" id="productStock" required>
-						</div>
-						<div class="col-md-4">
-							<label for="productStatus" class="form-label">Statut</label>
-							<select class="form-select" id="productStatus" required>
-								<option value="active">Actif</option>
-								<option value="inactive">Inactif</option>
-							</select>
-						</div>
-					</div>
-					<div class="mb-3">
-						<label for="productDescription" class="form-label">Description</label>
-						<textarea class="form-control" id="productDescription" rows="3" required></textarea>
-					</div>
-					<div class="mb-3">
-						<label for="productImages" class="form-label">Images</label>
-						<input class="form-control" type="file" id="productImages" multiple>
-						<div class="form-text">Vous pouvez sélectionner plusieurs images.</div>
-					</div>
-					<div class="mb-3">
-						<label class="form-label">Caractéristiques</label>
-						<div id="featuresContainer">
-							<div class="row mb-2 feature-row">
-								<div class="col-5">
-									<input type="text" class="form-control" placeholder="Nom de la caractéristique">
-								</div>
-								<div class="col-5">
-									<input type="text" class="form-control" placeholder="Valeur">
-								</div>
-								<div class="col-2">
-									<button type="button" class="btn btn-danger remove-feature">
-										<i class="fas fa-times"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-						<button type="button" class="btn btn-outline-secondary mt-2" id="addFeature">
-							<i class="fas fa-plus me-2"></i>Ajouter une caractéristique
-						</button>
-					</div>
-				</form>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-				<button type="button" class="btn btn-primary">Enregistrer</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Edit Product Modal (identical structure as Add Product Modal but filled with data) -->
-<div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="editProductModalLabel">Modifier un Produit</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<form id="editProductForm">
-					<div class="row mb-3">
-						<div class="col-md-6">
-							<label for="editProductName" class="form-label">Nom du produit</label>
-							<input type="text" class="form-control" id="editProductName" value="Collier Étoile" required>
-						</div>
-						<div class="col-md-6">
-							<label for="editProductCategory" class="form-label">Catégorie</label>
-							<select class="form-select" id="editProductCategory" required>
-								<option value="">Sélectionner une catégorie</option>
-								<option value="1" selected>Bijoux</option>
-								<option value="2">Accessoires</option>
-								<option value="3">Vêtements</option>
-							</select>
-						</div>
-					</div>
-					<div class="row mb-3">
-						<div class="col-md-4">
-							<label for="editProductPrice" class="form-label">Prix (€)</label>
-							<input type="number" step="0.01" class="form-control" id="editProductPrice" value="39.99" required>
-						</div>
-						<div class="col-md-4">
-							<label for="editProductStock" class="form-label">Stock</label>
-							<input type="number" class="form-control" id="editProductStock" value="15" required>
-						</div>
-						<div class="col-md-4">
-							<label for="editProductStatus" class="form-label">Statut</label>
-							<select class="form-select" id="editProductStatus" required>
-								<option value="active" selected>Actif</option>
-								<option value="inactive">Inactif</option>
-							</select>
-						</div>
-					</div>
-					<div class="mb-3">
-						<label for="editProductDescription" class="form-label">Description</label>
-						<textarea class="form-control" id="editProductDescription" rows="3" required>Magnifique collier en argent avec pendentif en forme d'étoile.</textarea>
-					</div>
-					<div class="mb-3">
-						<label for="editProductImages" class="form-label">Images</label>
-						<div class="mb-2">
-							<div class="d-flex align-items-center mb-2">
-								<img src="../img/product1.jpg" alt="Product image" class="img-thumbnail me-2" width="100">
-								<button type="button" class="btn btn-sm btn-outline-danger">
-									<i class="fas fa-trash"></i>
-								</button>
-							</div>
-						</div>
-						<input class="form-control" type="file" id="editProductImages" multiple>
-						<div class="form-text">Vous pouvez sélectionner plusieurs images.</div>
-					</div>
-					<div class="mb-3">
-						<label class="form-label">Caractéristiques</label>
-						<div id="editFeaturesContainer">
-							<div class="row mb-2 feature-row">
-								<div class="col-5">
-									<input type="text" class="form-control" placeholder="Nom de la caractéristique" value="Matière">
-								</div>
-								<div class="col-5">
-									<input type="text" class="form-control" placeholder="Valeur" value="Argent 925">
-								</div>
-								<div class="col-2">
-									<button type="button" class="btn btn-danger remove-feature">
-										<i class="fas fa-times"></i>
-									</button>
-								</div>
-							</div>
-							<div class="row mb-2 feature-row">
-								<div class="col-5">
-									<input type="text" class="form-control" placeholder="Nom de la caractéristique" value="Longueur">
-								</div>
-								<div class="col-5">
-									<input type="text" class="form-control" placeholder="Valeur" value="45 cm">
-								</div>
-								<div class="col-2">
-									<button type="button" class="btn btn-danger remove-feature">
-										<i class="fas fa-times"></i>
-									</button>
-								</div>
-							</div>
-						</div>
-						<button type="button" class="btn btn-outline-secondary mt-2" id="editAddFeature">
-							<i class="fas fa-plus me-2"></i>Ajouter une caractéristique
-						</button>
-					</div>
-				</form>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-				<button type="button" class="btn btn-primary">Mettre à jour</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Delete Confirmation Modal -->
-<div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel"
-     aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="deleteConfirmModalLabel">Confirmer la suppression</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<p>Êtes-vous sûr de vouloir supprimer ce produit ? Cette action est irréversible.</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-				<button type="button" class="btn btn-danger">Supprimer</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Promotion Modal -->
-<div class="modal fade" id="promoProductModal" tabindex="-1" aria-labelledby="promoProductModalLabel"
-     aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="promoProductModalLabel">Appliquer une Promotion</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<form id="promoProductForm">
-					<div class="mb-3">
-						<label for="promoType" class="form-label">Type de promotion</label>
-						<select class="form-select" id="promoType" required>
-							<option value="">Sélectionner un type</option>
-							<option value="percentage">Pourcentage</option>
-							<option value="fixed">Montant fixe</option>
-							<option value="special">Prix spécial</option>
-						</select>
-					</div>
-					<div class="mb-3">
-						<label for="promoValue" class="form-label">Valeur de la promotion</label>
-						<div class="input-group">
-							<input type="number" step="0.01" class="form-control" id="promoValue" required>
-							<span class="input-group-text" id="promoValueSymbol">€</span>
-						</div>
-						<div class="form-text" id="promoValueHelp">Entrez le montant ou le pourcentage de réduction.</div>
-					</div>
-					<div class="mb-3">
-						<label for="promoStart" class="form-label">Date de début</label>
-						<input type="date" class="form-control" id="promoStart" required>
-					</div>
-					<div class="mb-3">
-						<label for="promoEnd" class="form-label">Date de fin</label>
-						<input type="date" class="form-control" id="promoEnd" required>
-					</div>
-				</form>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-				<button type="button" class="btn btn-primary">Appliquer</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Bulk Promotion Modal -->
-<div class="modal fade" id="bulkPromoModal" tabindex="-1" aria-labelledby="bulkPromoModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="bulkPromoModalLabel">Appliquer une Promotion à plusieurs produits</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<p class="selected-products-info">Vous allez appliquer une promotion à <span id="selectedProductsCount">0</span>
-					produit(s).</p>
-				<form id="bulkPromoForm">
-					<div class="mb-3">
-						<label for="bulkPromoType" class="form-label">Type de promotion</label>
-						<select class="form-select" id="bulkPromoType" required>
-							<option value="">Sélectionner un type</option>
-							<option value="percentage">Pourcentage</option>
-							<option value="fixed">Montant fixe</option>
-						</select>
-					</div>
-					<div class="mb-3">
-						<label for="bulkPromoValue" class="form-label">Valeur de la promotion</label>
-						<div class="input-group">
-							<input type="number" step="0.01" class="form-control" id="bulkPromoValue" required>
-							<span class="input-group-text" id="bulkPromoValueSymbol">€</span>
-						</div>
-					</div>
-					<div class="mb-3">
-						<label for="bulkPromoStart" class="form-label">Date de début</label>
-						<input type="date" class="form-control" id="bulkPromoStart" required>
-					</div>
-					<div class="mb-3">
-						<label for="bulkPromoEnd" class="form-label">Date de fin</label>
-						<input type="date" class="form-control" id="bulkPromoEnd" required>
-					</div>
-				</form>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-				<button type="button" class="btn btn-primary">Appliquer à tous les produits sélectionnés</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Import/Export Modal -->
-<div class="modal fade" id="importExportModal" tabindex="-1" aria-labelledby="importExportModalLabel"
-     aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="importExportModalLabel">Import/Export de Produits</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<ul class="nav nav-tabs" id="importExportTab" role="tablist">
-					<li class="nav-item" role="presentation">
-						<button class="nav-link active" id="import-tab" data-bs-toggle="tab" data-bs-target="#import" type="button"
-						        role="tab" aria-controls="import" aria-selected="true">Importer
-						</button>
-					</li>
-					<li class="nav-item" role="presentation">
-						<button class="nav-link" id="export-tab" data-bs-toggle="tab" data-bs-target="#export" type="button"
-						        role="tab" aria-controls="export" aria-selected="false">Exporter
-						</button>
-					</li>
-				</ul>
-				<div class="tab-content pt-3" id="importExportTabContent">
-					<div class="tab-pane fade show active" id="import" role="tabpanel" aria-labelledby="import-tab">
-						<form id="importForm">
-							<div class="mb-3">
-								<label for="importFile" class="form-label">Fichier CSV ou Excel</label>
-								<input class="form-control" type="file" id="importFile" accept=".csv, .xlsx, .xls">
-								<div class="form-text">Formats acceptés: CSV, Excel (.xlsx, .xls)</div>
-							</div>
-							<div class="mb-3">
-								<div class="form-check">
-									<input class="form-check-input" type="checkbox" id="updateExisting">
-									<label class="form-check-label" for="updateExisting">
-										Mettre à jour les produits existants
-									</label>
-								</div>
-							</div>
-							<div class="mb-3">
-								<a href="../templates/import_template.xlsx" class="btn btn-sm btn-outline-secondary">
-									<i class="fas fa-download me-2"></i>Télécharger le modèle
-								</a>
-							</div>
-						</form>
-					</div>
-					<div class="tab-pane fade" id="export" role="tabpanel" aria-labelledby="export-tab">
-						<form id="exportForm">
-							<div class="mb-3">
-								<label class="form-label">Format d'exportation</label>
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exportFormat" id="exportCSV" value="csv" checked>
-									<label class="form-check-label" for="exportCSV">
-										CSV
-									</label>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exportFormat" id="exportExcel" value="excel">
-									<label class="form-check-label" for="exportExcel">
-										Excel (.xlsx)
-									</label>
-								</div>
-							</div>
-							<div class="mb-3">
-								<label class="form-label">Options d'exportation</label>
-								<div class="form-check">
-									<input class="form-check-input" type="checkbox" id="exportImages" checked>
-									<label class="form-check-label" for="exportImages">
-										Inclure les URLs des images
-									</label>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="checkbox" id="exportCategories" checked>
-									<label class="form-check-label" for="exportCategories">
-										Inclure les détails des catégories
-									</label>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="checkbox" id="exportStock" checked>
-									<label class="form-check-label" for="exportStock">
-										Inclure les informations de stock
-									</label>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-				<button type="button" class="btn btn-primary" id="importExportBtn">Importer</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Bulk Delete Confirmation Modal -->
-<div class="modal fade" id="bulkDeleteConfirmModal" tabindex="-1" aria-labelledby="bulkDeleteConfirmModalLabel"
-     aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="bulkDeleteConfirmModalLabel">Confirmer la suppression en masse</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<div class="alert alert-danger">
-					<i class="fas fa-exclamation-triangle me-2"></i>
-					<span>Attention ! Cette action est irréversible.</span>
-				</div>
-				<p>Vous êtes sur le point de supprimer <span id="bulkDeleteCount">0</span> produit(s). Êtes-vous sûr de vouloir
-					continuer ?</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-				<button type="button" class="btn btn-danger" id="confirmBulkDelete">Supprimer définitivement</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<script src="../js/bootstrap.bundle.min.js"></script>
-<script>
-  // Ajout de caractéristiques
-  document.getElementById('addFeature').addEventListener('click', function () {
-    const featureRow = document.createElement('div');
-    featureRow.className = 'row mb-2 feature-row';
-    featureRow.innerHTML = `
-                <div class="col-5">
-                    <input type="text" class="form-control" placeholder="Nom de la caractéristique">
-                </div>
-                <div class="col-5">
-                    <input type="text" class="form-control" placeholder="Valeur">
-                </div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-danger remove-feature">
-                        <i class="fas fa-times"></i>
+        <!-- Products Table -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+          <table class="w-full text-left">
+            <thead class="bg-gray-100 border-b">
+              <tr>
+                <th class="px-6 py-3">Image</th>
+                <th class="px-6 py-3">Nom du produit</th>
+                <th class="px-6 py-3">Catégorie</th>
+                <th class="px-6 py-3">Prix</th>
+                <th class="px-6 py-3">Stock</th>
+                <th class="px-6 py-3">Statut</th>
+                <th class="px-6 py-3">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Sample product rows -->
+              <tr class="border-b hover:bg-gray-50">
+                <td class="px-6 py-4">
+                  <img
+                    src="https://via.placeholder.com/50"
+                    alt="Bague Diamond"
+                    class="w-12 h-12 object-cover rounded"
+                  />
+                </td>
+                <td class="px-6 py-4 font-medium">Bague Diamond Elite</td>
+                <td class="px-6 py-4">Bagues</td>
+                <td class="px-6 py-4">599 €</td>
+                <td class="px-6 py-4">12</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs"
+                    >En stock</span
+                  >
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex space-x-2">
+                    <button class="text-blue-600 hover:text-blue-800">
+                      <i class="bi bi-pencil"></i>
                     </button>
-                </div>
-            `;
-    document.getElementById('featuresContainer').appendChild(featureRow);
-
-    // Ajouter l'événement pour supprimer la caractéristique
-    featureRow.querySelector('.remove-feature').addEventListener('click', function () {
-      featureRow.remove();
-    });
-  });
-
-  // Même chose pour le formulaire d'édition
-  document.getElementById('editAddFeature').addEventListener('click', function () {
-    const featureRow = document.createElement('div');
-    featureRow.className = 'row mb-2 feature-row';
-    featureRow.innerHTML = `
-                <div class="col-5">
-                    <input type="text" class="form-control" placeholder="Nom de la caractéristique">
-                </div>
-                <div class="col-5">
-                    <input type="text" class="form-control" placeholder="Valeur">
-                </div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-danger remove-feature">
-                        <i class="fas fa-times"></i>
+                    <button class="text-red-600 hover:text-red-800">
+                      <i class="bi bi-trash"></i>
                     </button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b hover:bg-gray-50">
+                <td class="px-6 py-4">
+                  <img
+                    src="https://via.placeholder.com/50"
+                    alt="Collier Saphir"
+                    class="w-12 h-12 object-cover rounded"
+                  />
+                </td>
+                <td class="px-6 py-4 font-medium">Collier Saphir Royal</td>
+                <td class="px-6 py-4">Colliers</td>
+                <td class="px-6 py-4">899 €</td>
+                <td class="px-6 py-4">5</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs"
+                    >En stock</span
+                  >
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex space-x-2">
+                    <button class="text-blue-600 hover:text-blue-800">
+                      <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="text-red-600 hover:text-red-800">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b hover:bg-gray-50">
+                <td class="px-6 py-4">
+                  <img
+                    src="https://via.placeholder.com/50"
+                    alt="Bracelet Crystal"
+                    class="w-12 h-12 object-cover rounded"
+                  />
+                </td>
+                <td class="px-6 py-4 font-medium">Bracelet Crystal Light</td>
+                <td class="px-6 py-4">Bracelets</td>
+                <td class="px-6 py-4">349 €</td>
+                <td class="px-6 py-4">0</td>
+                <td class="px-6 py-4">
+                  <span
+                    class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs"
+                    >Épuisé</span
+                  >
+                </td>
+                <td class="px-6 py-4">
+                  <div class="flex space-x-2">
+                    <button class="text-blue-600 hover:text-blue-800">
+                      <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="text-red-600 hover:text-red-800">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Pagination -->
+          <div class="px-6 py-4 flex items-center justify-between border-t">
+            <div>
+              <p class="text-sm text-gray-700">
+                Affichage de <span class="font-medium">1</span> à
+                <span class="font-medium">3</span> sur
+                <span class="font-medium">24</span> résultats
+              </p>
+            </div>
+            <div class="flex space-x-2">
+              <button
+                class="px-3 py-1 border rounded hover:bg-gray-100 disabled:opacity-50"
+              >
+                Précédent
+              </button>
+              <button
+                class="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
+              >
+                1
+              </button>
+              <button class="px-3 py-1 border rounded hover:bg-gray-100">
+                2
+              </button>
+              <button class="px-3 py-1 border rounded hover:bg-gray-100">
+                3
+              </button>
+              <button class="px-3 py-1 border rounded hover:bg-gray-100">
+                Suivant
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Product Edit Modal -->
+    <div
+      id="editProductModal"
+      class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden flex items-center justify-center z-50"
+    >
+      <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl mx-4">
+        <div class="border-b px-6 py-3 flex justify-between items-center">
+          <h3 class="text-xl font-semibold">Modifier le produit</h3>
+          <button id="closeEditModal" class="text-gray-500 hover:text-gray-700">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div class="p-6">
+          <form id="editProductForm">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div class="col-span-1 md:col-span-2">
+                <div class="mb-4 flex items-center">
+                  <img
+                    id="previewImage"
+                    src="https://via.placeholder.com/100"
+                    class="w-24 h-24 object-cover rounded mr-4"
+                    alt="Aperçu du produit"
+                  />
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1"
+                      >Image du produit</label
+                    >
+                    <input
+                      type="file"
+                      class="w-full text-sm"
+                      accept="image/*"
+                    />
+                  </div>
                 </div>
-            `;
-    document.getElementById('editFeaturesContainer').appendChild(featureRow);
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Nom du produit</label
+                >
+                <input
+                  type="text"
+                  id="productName"
+                  class="w-full px-3 py-2 border rounded"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Catégorie</label
+                >
+                <select
+                  id="productCategory"
+                  class="w-full px-3 py-2 border rounded"
+                  required
+                >
+                  <option value="bagues">Bagues</option>
+                  <option value="colliers">Colliers</option>
+                  <option value="bracelets">Bracelets</option>
+                  <option value="boucles">Boucles d'oreilles</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Prix (€)</label
+                >
+                <input
+                  type="number"
+                  id="productPrice"
+                  class="w-full px-3 py-2 border rounded"
+                  min="0"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Stock</label
+                >
+                <input
+                  type="number"
+                  id="productStock"
+                  class="w-full px-3 py-2 border rounded"
+                  min="0"
+                  required
+                />
+              </div>
+              <div class="col-span-1 md:col-span-2">
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Description</label
+                >
+                <textarea
+                  id="productDescription"
+                  rows="4"
+                  class="w-full px-3 py-2 border rounded"
+                ></textarea>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Statut</label
+                >
+                <select
+                  id="productStatus"
+                  class="w-full px-3 py-2 border rounded"
+                >
+                  <option value="en_stock">En stock</option>
+                  <option value="epuise">Épuisé</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex justify-end space-x-3 border-t pt-4">
+              <button
+                type="button"
+                id="cancelEdit"
+                class="px-4 py-2 border rounded hover:bg-gray-100"
+              >
+                Annuler
+              </button>
+              <button
+                type="submit"
+                class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+              >
+                Enregistrer les modifications
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
-    // Ajouter l'événement pour supprimer la caractéristique
-    featureRow.querySelector('.remove-feature').addEventListener('click', function () {
-      featureRow.remove();
-    });
-  });
+    <script>
+      // Edit modal functionality
+      const editButtons = document.querySelectorAll(".bi-pencil");
+      const editModal = document.getElementById("editProductModal");
+      const closeEditModal = document.getElementById("closeEditModal");
+      const cancelEdit = document.getElementById("cancelEdit");
 
-  // Attacher les gestionnaires d'événements aux boutons de suppression existants
-  document.querySelectorAll('.remove-feature').forEach(button => {
-    button.addEventListener('click', function () {
-      this.closest('.feature-row').remove();
-    });
-  });
+      editButtons.forEach((button) => {
+        button.parentElement.addEventListener("click", () => {
+          // Here you would populate the form with the product data
+          const row = button.closest("tr");
+          document.getElementById("productName").value =
+            row.querySelector("td:nth-child(2)").textContent;
+          document.getElementById("previewImage").src =
+            row.querySelector("img").src;
+          document.getElementById("productCategory").value = row
+            .querySelector("td:nth-child(3)")
+            .textContent.toLowerCase();
+          document.getElementById("productPrice").value = parseInt(
+            row.querySelector("td:nth-child(4)").textContent
+          );
+          document.getElementById("productStock").value =
+            row.querySelector("td:nth-child(5)").textContent;
+          document.getElementById("productStatus").value = row
+            .querySelector("td:nth-child(6) span")
+            .textContent.includes("En stock")
+            ? "en_stock"
+            : "epuise";
 
-  // Gestion des sélections en masse
-  const selectAllCheckbox = document.getElementById('selectAllProducts');
-  const productCheckboxes = document.querySelectorAll('.product-checkbox');
-  const selectedCountElem = document.querySelector('.selected-count');
+          editModal.classList.remove("hidden");
+        });
+      });
 
-  // Sélectionner/désélectionner tous les produits
-  selectAllCheckbox.addEventListener('change', function () {
-    const isChecked = this.checked;
-    productCheckboxes.forEach(checkbox => {
-      checkbox.checked = isChecked;
-    });
-    updateSelectedCount();
-  });
+      [closeEditModal, cancelEdit].forEach((element) => {
+        element.addEventListener("click", () => {
+          editModal.classList.add("hidden");
+        });
+      });
 
-  // Mettre à jour le compteur de sélection
-  productCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', updateSelectedCount);
-  });
-
-  function updateSelectedCount() {
-    const selectedCount = document.querySelectorAll('.product-checkbox:checked').length;
-    selectedCountElem.textContent = `${selectedCount} produit(s) sélectionné(s)`;
-
-    // Mettre à jour également les modales
-    document.getElementById('selectedProductsCount').textContent = selectedCount;
-    document.getElementById('bulkDeleteCount').textContent = selectedCount;
-  }
-
-  // Gestion des actions en masse
-  document.getElementById('bulkActivate').addEventListener('click', function (e) {
-    e.preventDefault();
-    // Implémentation de l'activation en masse
-    alert('Fonction d\'activation en masse à implémenter');
-  });
-
-  document.getElementById('bulkDeactivate').addEventListener('click', function (e) {
-    e.preventDefault();
-    // Implémentation de la désactivation en masse
-    alert('Fonction de désactivation en masse à implémenter');
-  });
-
-  document.getElementById('bulkPromote').addEventListener('click', function (e) {
-    e.preventDefault();
-    const selectedCount = document.querySelectorAll('.product-checkbox:checked').length;
-    if (selectedCount > 0) {
-      // Ouvrir la modale de promotion en masse
-      const bulkPromoModal = new bootstrap.Modal(document.getElementById('bulkPromoModal'));
-      bulkPromoModal.show();
-    } else {
-      alert('Veuillez sélectionner au moins un produit.');
-    }
-  });
-
-  document.getElementById('bulkDelete').addEventListener('click', function (e) {
-    e.preventDefault();
-    const selectedCount = document.querySelectorAll('.product-checkbox:checked').length;
-    if (selectedCount > 0) {
-      // Ouvrir la modale de confirmation de suppression en masse
-      const bulkDeleteModal = new bootstrap.Modal(document.getElementById('bulkDeleteConfirmModal'));
-      bulkDeleteModal.show();
-    } else {
-      alert('Veuillez sélectionner au moins un produit.');
-    }
-  });
-
-  // Gestion du type de promotion
-  document.getElementById('promoType').addEventListener('change', function () {
-    const valueSymbol = document.getElementById('promoValueSymbol');
-    if (this.value === 'percentage') {
-      valueSymbol.textContent = '%';
-    } else {
-      valueSymbol.textContent = '€';
-    }
-  });
-
-  document.getElementById('bulkPromoType').addEventListener('change', function () {
-    const valueSymbol = document.getElementById('bulkPromoValueSymbol');
-    if (this.value === 'percentage') {
-      valueSymbol.textContent = '%';
-    } else {
-      valueSymbol.textContent = '€';
-    }
-  });
-
-  // Gestion de l'import/export
-  document.getElementById('importExportTab').addEventListener('click', function (e) {
-    if (e.target.id === 'import-tab') {
-      document.getElementById('importExportBtn').textContent = 'Importer';
-    } else if (e.target.id === 'export-tab') {
-      document.getElementById('importExportBtn').textContent = 'Exporter';
-    }
-  });
-
-  document.getElementById('importExportBtn').addEventListener('click', function () {
-    const activeTab = document.querySelector('.tab-pane.active');
-    if (activeTab.id === 'import') {
-      // Logique d'importation
-      const importFile = document.getElementById('importFile').files[0];
-      if (importFile) {
-        alert(`Importation du fichier ${importFile.name} en cours...`);
-        // Implémentation de l'importation
-      } else {
-        alert('Veuillez sélectionner un fichier à importer.');
-      }
-    } else if (activeTab.id === 'export') {
-      // Logique d'exportation
-      const format = document.querySelector('input[name="exportFormat"]:checked').value;
-      alert(`Exportation au format ${format} en cours...`);
-      // Implémentation de l'exportation
-    }
-  });
-</script>
-</body>
+      // Form submission
+      document
+        .getElementById("editProductForm")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          // Handle form submission with AJAX or form post
+          alert("Produit mis à jour avec succès!");
+          editModal.classList.add("hidden");
+        });
+    </script>
+  </body>
 </html>
