@@ -1,931 +1,938 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-	<meta charset="UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<meta
-		name="keywords"
-		content="ecommerce,fashion,store, bijoux artisanaux, créations uniques, bijoux faits main, bijoux sur mesure, bagues artisanales, colliers faits main, bracelets en argent, boucles d’oreilles en or, pierres précieuses, bijouterie artisanale, savoir-faire joaillier, pièces uniques, créations originales"
-	/>
-	<meta
-		name="description"
-		content="Découvrez ma bijouterie artisanale et ses créations uniques faites main. Bagues, colliers, bracelets, boucles d’oreilles et grigris Noor en métal et pierres précieuses. Chaque pièce est fabriquée avec passion et savoir-faire. Offrez-vous un bijou d'exception !"
-	/>
-	<title>Noor Design</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="ecommerce,fashion,store, bijoux artisanaux, créations uniques, bijoux faits main, bijoux sur mesure, bagues artisanales, colliers faits main, bracelets en argent, boucles d’oreilles en or, pierres précieuses, bijouterie artisanale, savoir-faire joaillier, pièces uniques, créations originales"
+    />
+    <meta
+      name="description"
+      content="Découvrez ma bijouterie artisanale et ses créations uniques faites main. Bagues, colliers, bracelets, boucles d’oreilles et grigris Noor en métal et pierres précieuses. Chaque pièce est fabriquée avec passion et savoir-faire. Offrez-vous un bijou d'exception !"
+    />
+    <title>Noor Design</title>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com"/>
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-		rel="stylesheet"
-	/>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
-		rel="stylesheet"
-	/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+      <div
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="flex items-center text-2xl font-serif text-gray-800"
+          ><img
+            src="assets/logo/LOGOS NOOR_20250317_182433_0000.png"
+            alt="Noor Design"
+            class="h-10 mr-2 logo-rotate"
+          />NOOR DESIGN</a
+        >
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-800 hover:text-gold transition"
+            >Accueil</a
+          >
+          <a
+            href="pages/catalogue.html"
+            class="text-gray-600 hover:text-gold transition"
+            >Catalogue</a
+          >
+          <a
+            href="pages/contact.html"
+            class="text-gray-600 hover:text-gold transition"
+            >Contact</a
+          >
 
-	<link
-		href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-		rel="stylesheet"
-	/>
-	<link rel="stylesheet" href="css/styles.css"/>
-</head>
-<body class="bg-white">
-<!-- Navigation -->
-<nav class="bg-white shadow-md">
-	<div
-		class="container mx-auto px-6 py-3 flex justify-between items-center"
-	>
-		<a
-			href="index.html"
-			class="flex items-center text-2xl font-serif text-gray-800"
-		><img
-			src="assets/logo/LOGOS NOOR_20250317_182433_0000.png"
-			alt="Noor Design"
-			class="h-10 mr-2 logo-rotate"
-		/>NOOR DESIGN</a
-		>
-		<div class="hidden md:flex items-center space-x-8">
-			<a href="index.html" class="text-gray-800 hover:text-gold transition"
-			>Accueil</a
-			>
-			<a
-				href="pages/catalogue.html"
-				class="text-gray-600 hover:text-gold transition"
-			>Catalogue</a
-			>
-			<a
-				href="pages/contact.html"
-				class="text-gray-600 hover:text-gold transition"
-			>Contact</a
-			>
+          <form class="relative">
+            <input
+              type="text"
+              placeholder="Rechercher..."
+              class="pl-3 pr-10 py-1 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-gold"
+            />
+            <button
+              type="submit"
+              class="absolute right-0 top-0 mt-1 mr-2 text-gray-600 hover:text-gold"
+              aria-label="Rechercher"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </form>
 
-			<form class="relative">
-				<input
-					type="text"
-					placeholder="Rechercher..."
-					class="pl-3 pr-10 py-1 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-gold"
-				/>
-				<button
-					type="submit"
-					class="absolute right-0 top-0 mt-1 mr-2 text-gray-600 hover:text-gold"
-					aria-label="Rechercher"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-5 w-5"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-						/>
-					</svg>
-				</button>
-			</form>
+          <a
+            href="pages/inscription.html"
+            class="text-gray-600 hover:text-gold transition"
+            title="S'inscrire"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+          </a>
 
-			<a
-				href="pages/inscription.html"
-				class="text-gray-600 hover:text-gold transition"
-				title="S'inscrire"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-5 w-5"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-					/>
-				</svg>
-			</a>
+          <a
+            href="pages/login.html"
+            class="text-gray-600 hover:text-gold transition"
+            title="Se connecter"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+              />
+            </svg>
+          </a>
 
-			<a
-				href="pages/login.html"
-				class="text-gray-600 hover:text-gold transition"
-				title="Se connecter"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-5 w-5"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
-					/>
-				</svg>
-			</a>
+          <a
+            href="#"
+            class="text-gray-600 hover:text-gold transition"
+            title="Se déconnecter"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+              />
+            </svg>
+          </a>
 
-			<a
-				href="#"
-				class="text-gray-600 hover:text-gold transition"
-				title="Se déconnecter"
-			>
-				<svg xmlns="http://www.w3.org/2000/svg"
-				     class="h-5 w-5"
-				     fill="none"
-				     viewBox="0 0 24 24"
-				     stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-					/>
-				</svg>
-			</a>
+          <a
+            href="pages/panier.html"
+            class="flex items-center text-gray-600 hover:text-gold transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+              />
+            </svg>
+            <span>Panier (0)</span>
+          </a>
+        </div>
+        <!-- Burger menu pour mobile -->
+        <div class="md:hidden">
+          <button class="text-gray-600 focus:outline-none">
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
 
-			<a
-				href="pages/panier.html"
-				class="flex items-center text-gray-600 hover:text-gold transition"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-5 w-5 mr-1"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-					/>
-				</svg>
-				<span>Panier (0)</span>
-			</a>
-		</div>
-		<!-- Burger menu pour mobile -->
-		<div class="md:hidden">
-			<button class="text-gray-600 focus:outline-none">
-				<svg
-					class="h-6 w-6"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M4 6h16M4 12h16M4 18h16"
-					/>
-				</svg>
-			</button>
-		</div>
-	</div>
-</nav>
-
-<!-- Hero Section -->
-<div
-	class="relative bg-fixed bg-cover h-screen"
-	;
-	style="
+    <!-- Hero Section -->
+    <div
+      class="relative bg-fixed bg-cover h-screen"
+      ;
+      style="
         background-image: url('assets/images/Bijoux-Ete©ZolotarevaElina-AdobeStock.jpeg');
         background-position: center;
       "
->
-	<div class="absolute inset-0 bg-black opacity-40"></div>
-	<div
-		class="container mx-auto px-6 relative z-10 flex items-center h-full"
-	>
-		<div class="text-center mx-auto">
-			<h1
-				class="text-4xl sm:text-5xl text-white font-semibold leading-tight"
-			>
-				Lorem ipsum dolor sit amet
-				<br/>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-			</h1>
-			<p class="text-xl text-white mt-4">
-				Découvrez ma collection exclusive de bijoux artisanaux
-			</p>
-			<a
-				href="pages/catalogue.html"
-				class="mt-8 inline-block bg-gold text-white px-6 py-3 rounded-md hover:bg-gold-dark transition"
-			>Explorer la collection</a
-			>
-		</div>
-	</div>
-</div>
+    >
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+      <div
+        class="container mx-auto px-6 relative z-10 flex items-center h-full"
+      >
+        <div class="text-center mx-auto">
+          <h1
+            class="text-4xl sm:text-5xl text-white font-semibold leading-tight"
+          >
+            Lorem ipsum dolor sit amet
+            <br />Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </h1>
+          <p class="text-xl text-white mt-4">
+            Découvrez ma collection exclusive de bijoux artisanaux
+          </p>
+          <a
+            href="pages/catalogue.html"
+            class="mt-8 inline-block bg-gold text-white px-6 py-3 rounded-md hover:bg-gold-dark transition"
+            >Explorer la collection</a
+          >
+        </div>
+      </div>
+    </div>
 
-<!-- About Section -->
-<section class="bg-gray-100 py-12">
-	<div class="container mx-auto px-6">
-		<div class="flex flex-col md:flex-row items-center">
-			<div class="md:w-1/2 mb-8 md:mb-0">
-				<img
-					src="https://images.unsplash.com/photo-1531995811006-35cb42e1a022?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
-					alt="Notre atelier"
-					class="rounded-lg shadow-md"
-				/>
-			</div>
-			<div class="md:w-1/2 md:pl-10">
-				<h2 class="text-3xl font-semibold text-gray-800 mb-6">
-					Bienvenue dans l'univers de
-					<span class="font-serif cinzel">Noor Design</span>
-				</h2>
-				<p class="text-gray-600 leading-relaxed mb-4">
-					Miroir de mon esprit bohème chic, je confectionne mes bijoux en
-					suivant mon inspiration, sans me préoccuper des tendances du
-					moment. <br/>Le mélange des matières est le maître mot de mes
-					créations : j’assemble pierres semi-précieuses, nacre, et
-					coquillages avec minutie, pour vous proposer des parures
-					ensoleillées 🌞. <br/>
-					Je sélectionne avec le plus grand soin chaque matériau, en France,
-					pour façonner un dialogue singulier avec la peau.
-				</p>
-				<p class="text-gray-600 leading-relaxed mb-8">
-					Bienvenue dans l'univers de Noor Design. Chaque bijou est une
-					invitation au voyage. Embarquement immédiat vers des destinations
-					de rêve, teintées de soleil, de sérénité, de bonne humeur ... et
-					d’un soupçon de magie !
-				</p>
-				<p class="italic text-xl mb-6 font-serif text-right">
-					Anne-Laure, Fondatrice
-				</p>
+    <!-- About Section -->
+    <section class="bg-gray-100 py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <img
+              src="https://images.unsplash.com/photo-1531995811006-35cb42e1a022?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+              alt="Notre atelier"
+              class="rounded-lg shadow-md"
+            />
+          </div>
+          <div class="md:w-1/2 md:pl-10">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+              Bienvenue dans l'univers de
+              <span class="font-serif cinzel">Noor Design</span>
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Miroir de mon esprit bohème chic, je confectionne mes bijoux en
+              suivant mon inspiration, sans me préoccuper des tendances du
+              moment. <br />Le mélange des matières est le maître mot de mes
+              créations : j’assemble pierres semi-précieuses, nacre, et
+              coquillages avec minutie, pour vous proposer des parures
+              ensoleillées 🌞. <br />
+              Je sélectionne avec le plus grand soin chaque matériau, en France,
+              pour façonner un dialogue singulier avec la peau.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-8">
+              Bienvenue dans l'univers de Noor Design. Chaque bijou est une
+              invitation au voyage. Embarquement immédiat vers des destinations
+              de rêve, teintées de soleil, de sérénité, de bonne humeur ... et
+              d’un soupçon de magie !
+            </p>
+            <p class="italic text-xl mb-6 font-serif text-right">
+              Anne-Laure, Fondatrice
+            </p>
 
-				<!-- Mesure conservatoire pour intégrer certainement un page blog -->
-				<!-- <a
+            <!-- Mesure conservatoire pour intégrer certainement un page blog -->
+            <!-- <a
 			href="#"
 			class="inline-block border-2 border-gold text-gold px-6 py-3 rounded-md hover:bg-gold hover:text-white transition"
 			>Découvrir mon histoire</a
 		> -->
-			</div>
-		</div>
-	</div>
-</section>
-<!-- Featured Products -->
-<section class="container mx-auto px-6 py-12">
-	<h2 class="text-3xl font-semibold text-center text-gray-800 mb-12">
-		Mes créations iconiques
-	</h2>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-		<!-- Product 1 -->
-		<div
-			class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
-		>
-			<img
-				src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-				alt="Bague Diamant"
-				class="w-full h-64 object-cover"
-			/>
-			<div class="p-6">
-				<h3 class="text-xl font-semibold text-gray-800">
-					Bague Diamant Éternel
-				</h3>
-				<p class="text-gray-600 mt-2">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
-					corporis.
-				</p>
-				<div class="mt-4 flex justify-between items-center">
-					<span class="text-gold font-bold">45 €</span>
-					<a href="pages/produit.html" class="text-gold hover:underline"
-					>Voir détails</a
-					>
-				</div>
-			</div>
-		</div>
-		<!-- Product 2 -->
-		<div
-			class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
-		>
-			<img
-				src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-				alt="Collier Perle"
-				class="w-full h-64 object-cover"
-			/>
-			<div class="p-6">
-				<h3 class="text-xl font-semibold text-gray-800">
-					Collier Perle de Rosée
-				</h3>
-				<p class="text-gray-600 mt-2">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
-					corporis.
-				</p>
-				<div class="mt-4 flex justify-between items-center">
-					<span class="text-gold font-bold">80 €</span>
-					<a href="pages/produit.html" class="text-gold hover:underline"
-					>Voir détails</a
-					>
-				</div>
-			</div>
-		</div>
-		<!-- Product 3 -->
-		<div
-			class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
-		>
-			<img
-				src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-				alt="Bracelet Or"
-				class="w-full h-64 object-cover"
-			/>
-			<div class="p-6">
-				<h3 class="text-xl font-semibold text-gray-800">
-					Bracelet Harmonie
-				</h3>
-				<p class="text-gray-600 mt-2">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
-					corporis.
-				</p>
-				<div class="mt-4 flex justify-between items-center">
-					<span class="text-gold font-bold">59 €</span>
-					<a href="pages/produit.html" class="text-gold hover:underline"
-					>Voir détails</a
-					>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="text-center mt-12">
-		<a
-			href="pages/catalogue.html"
-			class="inline-block border-2 border-gold text-gold px-6 py-3 rounded-md hover:bg-gold hover:text-white transition"
-		>Voir tous mes bijoux</a
-		>
-	</div>
-</section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Products -->
+    <section class="container mx-auto px-6 py-12">
+      <h2 class="text-3xl font-semibold text-center text-gray-800 mb-12">
+        Mes créations iconiques
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            alt="Bague Diamant"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Bague Diamant Éternel
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
+              corporis.
+            </p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-gold font-bold">45 €</span>
+              <a href="pages/produit.html" class="text-gold hover:underline"
+                >Voir détails</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            alt="Collier Perle"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Collier Perle de Rosée
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
+              corporis.
+            </p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-gold font-bold">80 €</span>
+              <a href="pages/produit.html" class="text-gold hover:underline"
+                >Voir détails</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            alt="Bracelet Or"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800">
+              Bracelet Harmonie
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat,
+              corporis.
+            </p>
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-gold font-bold">59 €</span>
+              <a href="pages/produit.html" class="text-gold hover:underline"
+                >Voir détails</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a
+          href="pages/catalogue.html"
+          class="inline-block border-2 border-gold text-gold px-6 py-3 rounded-md hover:bg-gold hover:text-white transition"
+          >Voir tous mes bijoux</a
+        >
+      </div>
+    </section>
 
-<!-- Features Section -->
-<section class="container mx-auto px-6 py-12 bg-white">
-	<h2 class="text-3xl font-semibold text-center text-gray-800 mb-12">
-		Pourquoi choisir Noor Design ?
-	</h2>
-	<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-		<!-- Garantie Card -->
-		<div
-			class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
-		>
-			<div
-				class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-8 w-8 text-white"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-					/>
-				</svg>
-			</div>
-			<h3 class="text-xl font-semibold text-gray-800 mb-2">
-				Garantie Sereine
-			</h3>
-			<p class="text-gray-600">
-				Tous mes bijoux bénéficient d'une garantie qualité pour vous assurer tranquillité d'esprit et satisfaction
-				durable.
-			</p>
-		</div>
+    <!-- Features Section -->
+    <section class="container mx-auto px-6 py-12 bg-white">
+      <h2 class="text-3xl font-semibold text-center text-gray-800 mb-12">
+        Pourquoi choisir Noor Design ?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Garantie Card -->
+        <div
+          class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+        >
+          <div
+            class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Garantie Sereine
+          </h3>
+          <p class="text-gray-600">
+            Tous mes bijoux bénéficient d'une garantie qualité pour vous assurer
+            tranquillité d'esprit et satisfaction durable.
+          </p>
+        </div>
 
-		<!-- Livraison Card -->
-		<div
-			class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
-		>
-			<div
-				class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-8 w-8 text-white"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-					/>
-				</svg>
-			</div>
-			<h3 class="text-xl font-semibold text-gray-800 mb-2">
-				Livraison Soignée
-			</h3>
-			<p class="text-gray-600">
-				Expédition rapide et emballage élégant pour que chaque bijou vous parvienne dans les meilleures conditions.
-			</p>
-		</div>
+        <!-- Livraison Card -->
+        <div
+          class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+        >
+          <div
+            class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Livraison Soignée
+          </h3>
+          <p class="text-gray-600">
+            Expédition rapide et emballage élégant pour que chaque bijou vous
+            parvienne dans les meilleures conditions.
+          </p>
+        </div>
 
-		<!-- Éthique Card -->
-		<div
-			class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
-		>
-			<div
-				class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-8 w-8 text-white"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"
-					/>
-				</svg>
-			</div>
-			<h3 class="text-xl font-semibold text-gray-800 mb-2">
-				Démarche Éthique
-			</h3>
-			<p class="text-gray-600">
-				Matériaux sourcés de manière responsable et processus de création respectueux de l'environnement.
-			</p>
-		</div>
+        <!-- Éthique Card -->
+        <div
+          class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+        >
+          <div
+            class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Démarche Éthique
+          </h3>
+          <p class="text-gray-600">
+            Matériaux sourcés de manière responsable et processus de création
+            respectueux de l'environnement.
+          </p>
+        </div>
 
-		<!-- Positive Vibe Card -->
-		<div
-			class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
-		>
-			<div
-				class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-8 w-8 text-white"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M12 4v16m8-8H4"
-					/>
-				</svg>
-			</div>
-			<h3 class="text-xl font-semibold text-gray-800 mb-2">
-				Positive Vibes
-			</h3>
-			<p class="text-gray-600">
-				Des créations qui transmettent joie et énergie positive, pour illuminer votre quotidien et booster votre
-				confiance.
-			</p>
-		</div>
+        <!-- Positive Vibe Card -->
+        <div
+          class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+        >
+          <div
+            class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 4v16m8-8H4"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Positive Vibes
+          </h3>
+          <p class="text-gray-600">
+            Des créations qui transmettent joie et énergie positive, pour
+            illuminer votre quotidien et booster votre confiance.
+          </p>
+        </div>
 
-		<!-- Fidélité Card -->
-		<div
-			class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
-		>
-			<div
-				class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-8 w-8 text-white"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-					/>
-				</svg>
-			</div>
-			<h3 class="text-xl font-semibold text-gray-800 mb-2">
-				Fidélité Récompensée
-			</h3>
-			<p class="text-gray-600">
-				Programme de fidélité exclusif avec des avantages et réductions spéciales pour remercier nos clients réguliers.
-			</p>
-		</div>
+        <!-- Fidélité Card -->
+        <div
+          class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+        >
+          <div
+            class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Fidélité Récompensée
+          </h3>
+          <p class="text-gray-600">
+            Programme de fidélité exclusif avec des avantages et réductions
+            spéciales pour remercier nos clients réguliers.
+          </p>
+        </div>
 
-		<!-- Carte Cadeau Card -->
-		<div
-			class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
-		>
-			<div
-				class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-8 w-8 text-white"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"
-					/>
-				</svg>
-			</div>
-			<h3 class="text-xl font-semibold text-gray-800 mb-2">
-				Cartes Cadeaux
-			</h3>
-			<p class="text-gray-600">
-				Offrez le plaisir de choisir avec nos cartes cadeaux élégantes, parfaites pour faire plaisir à vos proches.
-			</p>
-		</div>
+        <!-- Carte Cadeau Card -->
+        <div
+          class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+        >
+          <div
+            class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Cartes Cadeaux
+          </h3>
+          <p class="text-gray-600">
+            Offrez le plaisir de choisir avec nos cartes cadeaux élégantes,
+            parfaites pour faire plaisir à vos proches.
+          </p>
+        </div>
 
-		<!-- Paiement Card -->
-		<div
-			class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
-		>
-			<div
-				class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-8 w-8 text-white"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-					/>
-				</svg>
-			</div>
-			<h3 class="text-xl font-semibold text-gray-800 mb-2">
-				Paiement Sécurisé
-			</h3>
-			<p class="text-gray-600">
-				Transactions protégées et multiples options de paiement pour vous garantir une expérience d'achat sereine.
-			</p>
-		</div>
+        <!-- Paiement Card -->
+        <div
+          class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+        >
+          <div
+            class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Paiement Sécurisé
+          </h3>
+          <p class="text-gray-600">
+            Transactions protégées et multiples options de paiement pour vous
+            garantir une expérience d'achat sereine.
+          </p>
+        </div>
 
-		<!-- Retour Card -->
-		<div
-			class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
-		>
-			<div
-				class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-8 w-8 text-white"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M16 15v-1a4 4 0 00-4-4H8m0 0l3 3m-3-3l3-3m9 14V5a2 2 0 00-2-2H6a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z"
-					/>
-				</svg>
-			</div>
-			<h3 class="text-xl font-semibold text-gray-800 mb-2">
-				Retours Facilités
-			</h3>
-			<p class="text-gray-600">
-				Politique de retour simple et flexible pour vous garantir une entière satisfaction avec vos achats.
-			</p>
-		</div>
+        <!-- Retour Card -->
+        <div
+          class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+        >
+          <div
+            class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 15v-1a4 4 0 00-4-4H8m0 0l3 3m-3-3l3-3m9 14V5a2 2 0 00-2-2H6a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Retours Facilités
+          </h3>
+          <p class="text-gray-600">
+            Politique de retour simple et flexible pour vous garantir une
+            entière satisfaction avec vos achats.
+          </p>
+        </div>
 
-		<!-- À votre écoute Card -->
-		<div
-			class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
-		>
-			<div
-				class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-8 w-8 text-white"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-					/>
-				</svg>
-			</div>
-			<h3 class="text-xl font-semibold text-gray-800 mb-2">
-				À Votre Écoute
-			</h3>
-			<p class="text-gray-600">
-				Service client attentif et réactif, prêt à répondre à toutes vos questions et à vous accompagner dans vos choix.
-			</p>
-		</div>
-	</div>
-</section>
+        <!-- À votre écoute Card -->
+        <div
+          class="bg-gray-50 rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+        >
+          <div
+            class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            À Votre Écoute
+          </h3>
+          <p class="text-gray-600">
+            Service client attentif et réactif, prêt à répondre à toutes vos
+            questions et à vous accompagner dans vos choix.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<!-- Testimonials Section -->
-<section class="py-16 color-bg-header">
-	<div class="container mx-auto px-6">
-		<h2 class="text-3xl font-semibold text-center text-gray-800 mb-12">
-			Vos mots doux
-		</h2>
+    <!-- Testimonials Section -->
+    <section class="py-16 color-bg-header">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-12">
+          Vos mots doux
+        </h2>
 
-		<div class="relative testimonial-carousel">
-			<!-- Testimonial Cards Container -->
-			<div class="overflow-hidden">
-				<div
-					class="flex transition-transform duration-500 testimonial-slider"
-				>
-					<!-- Testimonial 1 -->
-					<div class="w-full flex-shrink-0 px-4">
-						<div
-							class="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center"
-						>
-							<div
-								class="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-gold"
-							>
-								<img
-									src="https://randomuser.me/api/portraits/women/65.jpg"
-									alt="Client 1"
-									class="w-full h-full object-cover"
-								/>
-							</div>
-							<div class="text-center">
-								<p class="text-gray-600 italic mb-6 text-lg">
-									" Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Iusto facere dicta atque veritatis et ratione maxime
-									consequuntur delectus nesciunt eligendi incidunt vitae
-									laboriosam expedita ipsa voluptas ullam, necessitatibus
-									labore tenetur hic blanditiis quae? Vel iure accusantium
-									ex nesciunt dolor pariatur? "
-								</p>
-								<h4 class="text-xl font-semibold text-gray-800">
-									Sophie Martin
-								</h4>
-								<p class="text-gray-500">Paris</p>
-							</div>
-						</div>
-					</div>
+        <div class="relative testimonial-carousel">
+          <!-- Testimonial Cards Container -->
+          <div class="overflow-hidden">
+            <div
+              class="flex transition-transform duration-500 testimonial-slider"
+            >
+              <!-- Testimonial 1 -->
+              <div class="w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center"
+                >
+                  <div
+                    class="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-gold"
+                  >
+                    <img
+                      src="https://randomuser.me/api/portraits/women/65.jpg"
+                      alt="Client 1"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="text-center">
+                    <p class="text-gray-600 italic mb-6 text-lg">
+                      " Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iusto facere dicta atque veritatis et ratione maxime
+                      consequuntur delectus nesciunt eligendi incidunt vitae
+                      laboriosam expedita ipsa voluptas ullam, necessitatibus
+                      labore tenetur hic blanditiis quae? Vel iure accusantium
+                      ex nesciunt dolor pariatur? "
+                    </p>
+                    <h4 class="text-xl font-semibold text-gray-800">
+                      Sophie Martin
+                    </h4>
+                    <p class="text-gray-500">Paris</p>
+                  </div>
+                </div>
+              </div>
 
-					<!-- Testimonial 2 -->
-					<div class="w-full flex-shrink-0 px-4">
-						<div
-							class="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center"
-						>
-							<div
-								class="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-gold"
-							>
-								<img
-									src="https://randomuser.me/api/portraits/women/47.jpg"
-									alt="Client 2"
-									class="w-full h-full object-cover"
-								/>
-							</div>
-							<div class="text-center">
-								<p class="text-gray-600 italic mb-6 text-lg">
-									" Lorem ipsum, dolor sit amet consectetur adipisicing
-									elit. Necessitatibus perferendis cum, accusantium
-									reprehenderit repellendus ratione nobis numquam voluptatum
-									laudantium neque laboriosam maxime similique asperiores
-									quae corporis eum! Possimus veritatis deserunt excepturi
-									doloribus autem, quo laudantium molestias atque a numquam
-									optio. "
-								</p>
-								<h4 class="text-xl font-semibold text-gray-800">
-									Marie Dubois
-								</h4>
-								<p class="text-gray-500">Lyon</p>
-							</div>
-						</div>
-					</div>
+              <!-- Testimonial 2 -->
+              <div class="w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center"
+                >
+                  <div
+                    class="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-gold"
+                  >
+                    <img
+                      src="https://randomuser.me/api/portraits/women/47.jpg"
+                      alt="Client 2"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="text-center">
+                    <p class="text-gray-600 italic mb-6 text-lg">
+                      " Lorem ipsum, dolor sit amet consectetur adipisicing
+                      elit. Necessitatibus perferendis cum, accusantium
+                      reprehenderit repellendus ratione nobis numquam voluptatum
+                      laudantium neque laboriosam maxime similique asperiores
+                      quae corporis eum! Possimus veritatis deserunt excepturi
+                      doloribus autem, quo laudantium molestias atque a numquam
+                      optio. "
+                    </p>
+                    <h4 class="text-xl font-semibold text-gray-800">
+                      Marie Dubois
+                    </h4>
+                    <p class="text-gray-500">Lyon</p>
+                  </div>
+                </div>
+              </div>
 
-					<!-- Testimonial 3 -->
-					<div class="w-full flex-shrink-0 px-4">
-						<div
-							class="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center"
-						>
-							<div
-								class="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-gold"
-							>
-								<img
-									src="https://randomuser.me/api/portraits/men/32.jpg"
-									alt="Client 3"
-									class="w-full h-full object-cover"
-								/>
-							</div>
-							<div class="text-center">
-								<p class="text-gray-600 italic mb-6 text-lg">
-									" Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Dicta quas voluptatum assumenda maiores minima distinctio
-									quae sequi, numquam rem nobis non error quidem soluta!
-									Numquam fugit rerum id ipsam qui dolor in ea sed! Iure
-									quisquam fugiat perferendis architecto facilis! "
-								</p>
-								<h4 class="text-xl font-semibold text-gray-800">
-									Thomas Leroy
-								</h4>
-								<p class="text-gray-500">Nantes</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+              <!-- Testimonial 3 -->
+              <div class="w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center"
+                >
+                  <div
+                    class="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-gold"
+                  >
+                    <img
+                      src="https://randomuser.me/api/portraits/men/32.jpg"
+                      alt="Client 3"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="text-center">
+                    <p class="text-gray-600 italic mb-6 text-lg">
+                      " Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Dicta quas voluptatum assumenda maiores minima distinctio
+                      quae sequi, numquam rem nobis non error quidem soluta!
+                      Numquam fugit rerum id ipsam qui dolor in ea sed! Iure
+                      quisquam fugiat perferendis architecto facilis! "
+                    </p>
+                    <h4 class="text-xl font-semibold text-gray-800">
+                      Thomas Leroy
+                    </h4>
+                    <p class="text-gray-500">Nantes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-			<!-- Navigation Buttons -->
-			<button
-				class="absolute top-1/2 left-2 -translate-y-1/2 bg-white rounded-full p-2 shadow-md text-gold hover:bg-gold hover:text-white transition-all z-10 prev-btn"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-6 w-6"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M15 19l-7-7 7-7"
-					/>
-				</svg>
-			</button>
-			<button
-				class="absolute top-1/2 right-2 -translate-y-1/2 bg-white rounded-full p-2 shadow-md text-gold hover:bg-gold hover:text-white transition-all z-10 next-btn"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-6 w-6"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M9 5l7 7-7 7"
-					/>
-				</svg>
-			</button>
+          <!-- Navigation Buttons -->
+          <button
+            class="absolute top-1/2 left-2 -translate-y-1/2 bg-white rounded-full p-2 shadow-md text-gold hover:bg-gold hover:text-white transition-all z-10 prev-btn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            class="absolute top-1/2 right-2 -translate-y-1/2 bg-white rounded-full p-2 shadow-md text-gold hover:bg-gold hover:text-white transition-all z-10 next-btn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
 
-			<!-- Indicators -->
-			<div class="flex justify-center mb-2 mt-8 space-x-2">
-				<button
-					class="w-3 h-3 rounded-full bg-gray-300 indicator active-indicator"
-					data-index="0"
-				></button>
-				<button
-					class="w-3 h-3 rounded-full bg-gray-300 indicator"
-					data-index="1"
-				></button>
-				<button
-					class="w-3 h-3 rounded-full bg-gray-300 indicator"
-					data-index="2"
-				></button>
-			</div>
-		</div>
-	</div>
-</section>
+          <!-- Indicators -->
+          <div class="flex justify-center mb-2 mt-8 space-x-2">
+            <button
+              class="w-3 h-3 rounded-full bg-gray-300 indicator active-indicator"
+              data-index="0"
+            ></button>
+            <button
+              class="w-3 h-3 rounded-full bg-gray-300 indicator"
+              data-index="1"
+            ></button>
+            <button
+              class="w-3 h-3 rounded-full bg-gray-300 indicator"
+              data-index="2"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Footer -->
-<footer class="color-bg-footer text-gray-300 py-10">
-	<div class="container mx-auto px-6">
-		<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-			<div>
-				<h3 class="text-xl font-semibold text-white mb-4">Noor Design</h3>
-				<p class="leading-relaxed">Faites briller votre âme plus fort.</p>
-			</div>
-			<div>
-				<h3 class="text-xl font-semibold text-white mb-4">Liens rapides</h3>
-				<ul class="space-y-2">
-					<li>
-						<a href="index.html" class="hover:text-gold transition"
-						>Accueil</a
-						>
-					</li>
-					<li>
-						<a
-							href="pages/catalogue.html"
-							class="hover:text-gold transition"
-						>Catalogue</a
-						>
-					</li>
-					<li>
-						<a href="pages/contact.html" class="hover:text-gold transition"
-						>Contact</a
-						>
-					</li>
-					<li>
-						<a
-							href="pages/inscription.html"
-							class="hover:text-gold transition"
-						>Connexion</a
-						>
-					</li>
-					<li>
-						<a href="#" class="hover:text-gold transition">C.G.V</a>
-					</li>
-					<li>
-						<a href="#" class="hover:text-gold transition"
-						>Politique de remboursement</a
-						>
-					</li>
-					<li>
-						<a href="#" class="hover:text-gold transition"
-						>Politique de confidentialité</a
-						>
-					</li>
-					<li>
-						<a href="#" class="hover:text-gold transition"
-						>Mentions légales</a
-						>
-					</li>
-				</ul>
-			</div>
-			<div>
-				<h3 class="text-xl font-semibold text-white mb-4">
-					Nos collections
-				</h3>
-				<ul class="space-y-2">
-					<li>
-						<a href="#" class="hover:text-gold transition">Colliers</a>
-					</li>
-					<li>
-						<a href="#" class="hover:text-gold transition"
-						>Boucles d'oreilles</a
-						>
-					</li>
+    <!-- Footer -->
+    <footer class="color-bg-footer text-gray-300 py-10">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Noor Design</h3>
+            <p class="leading-relaxed">Faites briller votre âme plus fort.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Liens rapides</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="hover:text-gold transition"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pages/catalogue.html"
+                  class="hover:text-gold transition"
+                  >Catalogue</a
+                >
+              </li>
+              <li>
+                <a href="pages/contact.html" class="hover:text-gold transition"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pages/inscription.html"
+                  class="hover:text-gold transition"
+                  >Connexion</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition">C.G.V</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition"
+                  >Politique de remboursement</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition"
+                  >Politique de confidentialité</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition"
+                  >Mentions légales</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">
+              Nos collections
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-gold transition">Colliers</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition"
+                  >Boucles d'oreilles</a
+                >
+              </li>
 
-					<li>
-						<a href="#" class="hover:text-gold transition">Bracelets</a>
-					</li>
+              <li>
+                <a href="#" class="hover:text-gold transition">Bracelets</a>
+              </li>
 
-					<li><a href="#" class="hover:text-gold transition">Bagues</a></li>
-					<li>
-						<a href="#" class="hover:text-gold transition">Grigris Noor</a>
-					</li>
-				</ul>
-			</div>
-			<div>
-				<h3 class="text-xl font-semibold text-white mb-4">Contact</h3>
-				<p class="leading-relaxed mb-2">
-					<!-- 8 rue Auguste Lepère -->
-					44100 Nantes, France
-				</p>
-				<!-- Mesure conservatoire en attente de ma cliente pour un numéro professionnel -->
-				<!-- <p class="leading-relaxed mb-2">Tél: +33 7 57 53 05 19</p> -->
-				<p class="leading-relaxed mb-2">
-					<a
-						href="mailto:sav.noordesign@gmail.com"
-						class="hover:text-gold transition"
-					>sav.noordesign@gmail.com</a
-					>
-				</p>
-			</div>
-		</div>
-		<div
-			class="border-t mt-8 pt-6 flex flex-col md:flex-row justify-between items-center"
-			style="border-color: var(--color-bg-header)"
-		>
-			<p>© 2025 Noor Design. Tous droits réservés.</p>
+              <li><a href="#" class="hover:text-gold transition">Bagues</a></li>
+              <li>
+                <a href="#" class="hover:text-gold transition">Grigris Noor</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Contact</h3>
+            <p class="leading-relaxed mb-2">
+              <!-- 8 rue Auguste Lepère -->
+              44100 Nantes, France
+            </p>
+            <!-- Mesure conservatoire en attente de ma cliente pour un numéro professionnel -->
+            <!-- <p class="leading-relaxed mb-2">Tél: +33 7 57 53 05 19</p> -->
+            <p class="leading-relaxed mb-2">
+              <a
+                href="mailto:sav.noordesign@gmail.com"
+                class="hover:text-gold transition"
+                >sav.noordesign@gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
+        <div
+          class="border-t mt-8 pt-6 flex flex-col md:flex-row justify-between items-center"
+          style="border-color: var(--color-bg-header)"
+        >
+          <p>© 2025 Noor Design. Tous droits réservés.</p>
 
-			<div class="flex space-x-4 mt-4 md:mt-0">
-				<!-- Social media INSTAGRAM -->
-				<a href="#" class="text-gray-300 hover:text-gold transition">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-5 w-5"
-						fill="currentColor"
-						viewBox="0 0 24 24"
-					>
-						<path
-							d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-						/>
-					</svg>
-				</a>
+          <div class="flex space-x-4 mt-4 md:mt-0">
+            <!-- Social media INSTAGRAM -->
+            <a href="#" class="text-gray-300 hover:text-gold transition">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
 
-				<!-- Mesure conservatoire -Vinted- -->
-				<!-- <a href="#" class="text-gray-300 hover:text-gold transition">
+            <!-- Mesure conservatoire -Vinted- -->
+            <!-- <a href="#" class="text-gray-300 hover:text-gold transition">
 			<svg
 			viewBox="0 0 192 192"
 			xmlns="http://www.w3.org/2000/svg"
@@ -960,65 +967,63 @@
 			</g>
 			</svg>
 		</a> -->
-			</div>
-		</div>
-	</div>
-</footer>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
-<!-- Script pour le carroussel de 3 témoignages -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.querySelector(".testimonial-slider");
-    const prevBtn = document.querySelector(".prev-btn");
-    const nextBtn = document.querySelector(".next-btn");
-    const indicators = document.querySelectorAll(".indicator");
-    let currentIndex = 0;
+    <!-- Script pour le carroussel de 3 témoignages -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.querySelector(".testimonial-slider");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+        const indicators = document.querySelectorAll(".indicator");
+        let currentIndex = 0;
 
-    // Fonction pour mettre à jour le carrousel
-    function updateSlider() {
-      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        // Fonction pour mettre à jour le carrousel
+        function updateSlider() {
+          slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-      // Mettre à jour les indicateurs
-      indicators.forEach((indicator, index) => {
-        if (index === currentIndex) {
-          indicator.classList.add("bg-gold", "active-indicator");
-          indicator.classList.remove("bg-gray-300");
-        } else {
-          indicator.classList.remove("bg-gold", "active-indicator");
-          indicator.classList.add("bg-gray-300");
+          // Mettre à jour les indicateurs
+          indicators.forEach((indicator, index) => {
+            if (index === currentIndex) {
+              indicator.classList.add("bg-gold", "active-indicator");
+              indicator.classList.remove("bg-gray-300");
+            } else {
+              indicator.classList.remove("bg-gold", "active-indicator");
+              indicator.classList.add("bg-gray-300");
+            }
+          });
         }
+
+        // Evenements pour les boutons précédent et suivant
+        prevBtn.addEventListener("click", () => {
+          currentIndex = (currentIndex - 1 + 3) % 3;
+          updateSlider();
+        });
+
+        nextBtn.addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % 3;
+          updateSlider();
+        });
+
+        // Evenements pour les indicateurs.
+        indicators.forEach((indicator) => {
+          indicator.addEventListener("click", () => {
+            currentIndex = parseInt(indicator.dataset.index);
+            updateSlider();
+          });
+        });
+
+        // Interval de changement automatique reglé à 5 secondes
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % 3;
+          updateSlider();
+        }, 5000);
       });
-    }
-
-    // Evenements pour les boutons précédent et suivant
-    prevBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + 3) % 3;
-      updateSlider();
-    });
-
-    nextBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % 3;
-      updateSlider();
-    });
-
-    // Evenements pour les indicateurs.
-    indicators.forEach((indicator) => {
-      indicator.addEventListener("click", () => {
-        currentIndex = parseInt(indicator.dataset.index);
-        updateSlider();
-      });
-    });
-
-    // Interval de changement automatique reglé à 5 secondes
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % 3;
-      updateSlider();
-    }, 5000);
-  });
-</script>
-</body>
+    </script>
+  </body>
 </html>
-
-
