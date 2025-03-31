@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mon panier - Noor Design</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+      <div
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a
+          href="/index.html"
+          class="flex items-center text-2xl font-serif text-gray-800"
+          ><img
+            src="/assets/logo/LOGOS NOOR_20250317_182433_0000.png"
+            alt="Noor Design"
+            class="h-10 mr-2 logo-rotate"
+          />NOOR DESIGN</a
+        >
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/index.html" class="text-gray-800 hover:text-gold transition"
+            >Accueil</a
+          >
+          <a
+            href="/pages/catalogue.html"
+            class="text-gray-600 hover:text-gold transition"
+            >Catalogue</a
+          >
+          <a
+            href="/pages/contact.html"
+            class="text-gray-600 hover:text-gold transition"
+            >Contact</a
+          >
+
+          <form class="relative">
+            <input
+              type="text"
+              placeholder="Rechercher..."
+              class="pl-3 pr-10 py-1 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-gold"
+            />
+            <button
+              type="submit"
+              class="absolute right-0 top-0 mt-1 mr-2 text-gray-600 hover:text-gold"
+              aria-label="Rechercher"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </form>
+
+          <a
+            href="/pages/mon_profil.html"
+            class="text-gray-600 hover:text-gold transition"
+            title="Mon Profil"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="/pages/inscription.html"
+            class="text-gray-600 hover:text-gold transition"
+            title="S'inscrire"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="/pages/login.html"
+            class="text-gray-600 hover:text-gold transition"
+            title="Se connecter"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="#"
+            class="text-gray-600 hover:text-gold transition"
+            title="Se déconnecter"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="mon_panier.html"
+            class="flex items-center text-gray-600 hover:text-gold transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+              />
+            </svg>
+            <span>Panier (0)</span>
+          </a>
+        </div>
+        <!-- Burger menu pour mobile -->
+        <div class="md:hidden">
+          <button class="text-gray-600 focus:outline-none">
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="color-bg-header py-16">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl font-semibold text-gray-800 mb-2">Mon panier</h1>
+        <p class="text-lg text-gray-600">
+          Consultez et modifiez les articles de votre panier
+        </p>
+      </div>
+    </div>
+
+    <!-- Section du panier -->
+    <div class="container mx-auto px-6 py-12">
+      <!-- Contenu vide si le panier est vide -->
+      <div id="empty-cart" class="text-center py-10 hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-20 w-20 mx-auto text-gray-400 mb-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+          />
+        </svg>
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">
+          Votre panier est vide
+        </h2>
+        <p class="text-gray-500 mb-8">
+          Découvrez notre collection et ajoutez des articles à votre panier
+        </p>
+        <a
+          href="catalogue.html"
+          class="bg-gold text-white px-6 py-3 rounded-full hover:bg-yellow-600 transition"
+          >Explorer le catalogue</a
+        >
+      </div>
+
+      <!-- Tableau du panier avec produits -->
+      <div id="cart-content">
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-white border border-gray-200 mb-8">
+            <thead>
+              <tr class="bg-gray-100 text-gray-600">
+                <th class="py-3 px-4 text-left">Produit</th>
+                <th class="py-3 px-4 text-center">Prix unitaire</th>
+                <th class="py-3 px-4 text-center">Quantité</th>
+                <th class="py-3 px-4 text-center">Total</th>
+                <th class="py-3 px-4 text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Exemple de produit 1 -->
+              <tr class="border-t border-gray-200">
+                <td class="py-4 px-4">
+                  <div class="flex items-center">
+                    <img
+                      src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                      alt="Bracelet Harmonie"
+                      class="w-16 h-16 object-cover rounded mr-4"
+                    />
+                    <div>
+                      <h3 class="font-medium text-gray-800">
+                        Bracelet Harmonie
+                      </h3>
+                      <p class="text-sm text-gray-500">Réf: ND-BR2025-01</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-4 px-4 text-center">
+                  <span class="text-gray-700">59 €</span>
+                </td>
+                <td class="py-4 px-4 text-center">
+                  <div class="flex items-center justify-center">
+                    <div
+                      class="flex items-center border border-gray-300 rounded-full overflow-hidden"
+                    >
+                      <button
+                        type="button"
+                        class="px-3 py-1 bg-gray-100 text-gray-600 hover:bg-gray-200 transition quantity-decrease"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="quantity-input w-12 text-center border-0 focus:outline-none"
+                        min="1"
+                        max="10"
+                        value="1"
+                        data-price="59"
+                      />
+                      <button
+                        type="button"
+                        class="px-3 py-1 bg-gray-100 text-gray-600 hover:bg-gray-200 transition quantity-increase"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-4 px-4 text-center font-medium product-total">
+                  59 €
+                </td>
+                <td class="py-4 px-4 text-center">
+                  <button
+                    class="text-red-500 hover:text-red-700 transition remove-item"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                      />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Exemple de produit 2 -->
+              <tr class="border-t border-gray-200">
+                <td class="py-4 px-4">
+                  <div class="flex items-center">
+                    <img
+                      src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                      alt="Collier Perle de Rosée"
+                      class="w-16 h-16 object-cover rounded mr-4"
+                    />
+                    <div>
+                      <h3 class="font-medium text-gray-800">
+                        Collier Perle de Rosée
+                      </h3>
+                      <p class="text-sm text-gray-500">Réf: ND-C2025-01</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-4 px-4 text-center">
+                  <span class="text-gray-700">80 €</span>
+                </td>
+                <td class="py-4 px-4 text-center">
+                  <div class="flex items-center justify-center">
+                    <div
+                      class="flex items-center border border-gray-300 rounded-full overflow-hidden"
+                    >
+                      <button
+                        type="button"
+                        class="px-3 py-1 bg-gray-100 text-gray-600 hover:bg-gray-200 transition quantity-decrease"
+                      >
+                        -
+                      </button>
+                      <input
+                        type="number"
+                        class="quantity-input w-12 text-center border-0 focus:outline-none"
+                        min="1"
+                        max="10"
+                        value="2"
+                        data-price="80"
+                      />
+                      <button
+                        type="button"
+                        class="px-3 py-1 bg-gray-100 text-gray-600 hover:bg-gray-200 transition quantity-increase"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-4 px-4 text-center font-medium product-total">
+                  160 €
+                </td>
+                <td class="py-4 px-4 text-center">
+                  <button
+                    class="text-red-500 hover:text-red-700 transition remove-item"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                      />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Récapitulatif et total -->
+        <div
+          class="flex flex-col md:flex-row md:justify-between md:items-start"
+        >
+          <!-- Coupon -->
+          <div class="w-full md:w-1/3 mb-8 md:mb-0">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Code promo</h3>
+            <div class="flex items-center">
+              <input
+                type="text"
+                placeholder="Entrez votre code promo"
+                class="pl-3 pr-10 py-2 border border-gray-300 rounded-l-md text-sm focus:outline-none focus:ring-2 focus:ring-gold flex-grow"
+              />
+              <button
+                class="bg-gold text-white px-4 py-2 rounded-r-md hover:bg-yellow-600 transition"
+              >
+                Appliquer
+              </button>
+            </div>
+          </div>
+
+          <!-- Résumé de la commande -->
+          <div class="w-full md:w-1/3">
+            <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+              <h3 class="text-lg font-semibold text-gray-800 mb-4">
+                Résumé de la commande
+              </h3>
+
+              <div class="flex justify-between py-2 border-b border-gray-200">
+                <span class="text-gray-600">Sous-total</span>
+                <span class="font-medium text-gray-800" id="subtotal"
+                  >219 €</span
+                >
+              </div>
+
+              <div class="flex justify-between py-2 border-b border-gray-200">
+                <span class="text-gray-600">Livraison</span>
+                <span class="font-medium text-gray-800">Gratuite</span>
+              </div>
+
+              <div class="flex justify-between py-2 mb-4">
+                <span class="text-gray-600">TVA (20%)</span>
+                <span class="font-medium text-gray-800" id="tax">43,80 €</span>
+              </div>
+
+              <div class="flex justify-between py-2 border-t border-gray-300">
+                <span class="font-semibold text-gray-800">Total</span>
+                <span class="font-bold text-xl text-gold" id="total"
+                  >219 €</span
+                >
+              </div>
+
+              <button
+                class="w-full bg-gold text-white py-3 rounded-full mt-6 hover:bg-yellow-600 transition"
+              >
+                Procéder au paiement
+              </button>
+
+              <div class="flex justify-center mt-4">
+                <a
+                  href="catalogue.html"
+                  class="text-gold hover:underline flex items-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 mr-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                    />
+                  </svg>
+                  Continuer mes achats
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="color-bg-footer text-gray-300 py-10">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Noor Design</h3>
+            <p class="leading-relaxed">Faites briller votre âme plus fort.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Liens rapides</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="hover:text-gold transition"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pages/catalogue.html"
+                  class="hover:text-gold transition"
+                  >Catalogue</a
+                >
+              </li>
+              <li>
+                <a href="pages/contact.html" class="hover:text-gold transition"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pages/inscription.html"
+                  class="hover:text-gold transition"
+                  >Connexion</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition">C.G.V</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition"
+                  >Politique de remboursement</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition"
+                  >Politique de confidentialité</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition"
+                  >Mentions légales</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">
+              Nos collections
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-gold transition">Colliers</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-gold transition"
+                  >Boucles d'oreilles</a
+                >
+              </li>
+
+              <li>
+                <a href="#" class="hover:text-gold transition">Bracelets</a>
+              </li>
+
+              <li><a href="#" class="hover:text-gold transition">Bagues</a></li>
+              <li>
+                <a href="#" class="hover:text-gold transition">Grigris Noor</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Contact</h3>
+            <p class="leading-relaxed mb-2">
+              <!-- 8 rue Auguste Lepère -->
+              44100 Nantes, France
+            </p>
+            <!-- Mesure conservatoire en attente de ma cliente pour un numéro professionnel -->
+            <!-- <p class="leading-relaxed mb-2">Tél: +33 7 57 53 05 19</p> -->
+            <p class="leading-relaxed mb-2">
+              <a
+                href="mailto:sav.noordesign@gmail.com"
+                class="hover:text-gold transition"
+                >sav.noordesign@gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
+        <div
+          class="border-t mt-8 pt-6 flex flex-col md:flex-row justify-between items-center"
+          style="border-color: var(--color-bg-header)"
+        >
+          <p>© 2025 Noor Design. Tous droits réservés.</p>
+
+          <div class="flex space-x-4 mt-4 md:mt-0">
+            <!-- Social media INSTAGRAM -->
+            <a href="#" class="text-gray-300 hover:text-gold transition">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+
+            <!-- Mesure conservatoire -Vinted- -->
+            <!-- <a href="#" class="text-gray-300 hover:text-gold transition">
+			<svg
+			viewBox="0 0 192 192"
+			xmlns="http://www.w3.org/2000/svg"
+			xml:space="preserve"
+			fill="currentColor"
+			class="h-5 w-5"
+			>
+			<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+			<g
+				id="SVGRepo_tracerCarrier"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			></g>
+			<g id="SVGRepo_iconCarrier">
+				<g
+				fill="none"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-miterlimit="15"
+				stroke-width="12"
+				>
+				<path
+					d="M50.238 37.67c-2.755 35.056 5.454 102.65 10.204 121.69m0 0c3.204 11.958 24.991 15.612 41.854 1.504m.004.006c22.004-20.527 22.726-53.965 45.439-134.68m-.009-.006c1.766-6.592-2.701-3.395-2.701-3.395-5.883 3.397-5.329 3.899-6.135 4.705m.006 0c-1.128 1.128-3.417 1.34-3.417 1.34-1.512 0-2.62 1.562-2.62 1.562m-.003 0c-12.953 12.953-24.494 69.177-33.362 95.376-2.14 7.983-8.33 19.848-8.33 19.848-3.141-8.374-3.681-92.493-3.681-92.493"
+					style="paint-order: markers stroke fill"
+				></path>
+				<path
+					d="M87.49 53.127c0-5.2.453-9.836.453-9.836m0 0c.438-21.124-12.821-17.704-22.559-17.087M50.238 37.67c0-2.079 2.415-8.055 15.145-11.466"
+					style="paint-order: markers stroke fill"
+				></path>
+				</g>
+			</g>
+			</svg>
+		</a> -->
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Références aux éléments du DOM
+        const quantityInputs = document.querySelectorAll(".quantity-input");
+        const decreaseButtons = document.querySelectorAll(".quantity-decrease");
+        const increaseButtons = document.querySelectorAll(".quantity-increase");
+        const removeButtons = document.querySelectorAll(".remove-item");
+        const productTotals = document.querySelectorAll(".product-total");
+        const subtotalElement = document.getElementById("subtotal");
+        const taxElement = document.getElementById("tax");
+        const totalElement = document.getElementById("total");
+        const emptyCart = document.getElementById("empty-cart");
+        const cartContent = document.getElementById("cart-content");
+
+        // Vérifier si le panier est vide
+        function checkCartEmpty() {
+          const rows = document.querySelectorAll("tbody tr");
+          if (rows.length === 0) {
+            emptyCart.classList.remove("hidden");
+            cartContent.classList.add("hidden");
+          } else {
+            emptyCart.classList.add("hidden");
+            cartContent.classList.remove("hidden");
+          }
+        }
+
+        // Calculer le total d'un produit
+        function calculateProductTotal(input) {
+          const price = parseFloat(input.getAttribute("data-price"));
+          const quantity = parseInt(input.value);
+          const total = price * quantity;
+
+          // Mettre à jour le total du produit
+          const row = input.closest("tr");
+          const totalCell = row.querySelector(".product-total");
+          totalCell.textContent = total.toFixed(2) + " €";
+
+          updateOrderSummary();
+        }
+
+        // Mettre à jour le résumé de la commande
+        function updateOrderSummary() {
+          let subtotal = 0;
+
+          // Calculer le sous-total
+          document.querySelectorAll(".product-total").forEach((element) => {
+            const value = parseFloat(element.textContent.replace(" €", ""));
+            subtotal += value;
+          });
+
+          // Calculer la TVA et le total
+          const tax = subtotal * 0.2;
+          const total = subtotal;
+
+          // Mettre à jour l'affichage
+          subtotalElement.textContent = subtotal.toFixed(2) + " €";
+          taxElement.textContent = tax.toFixed(2) + " €";
+          totalElement.textContent = total.toFixed(2) + " €";
+
+          // Mettre à jour le compteur du panier dans la navigation
+          const cartCounter = document.querySelector(
+            'a[href="mon_panier.html"] span'
+          );
+          const totalQuantity = Array.from(quantityInputs).reduce(
+            (sum, input) => sum + parseInt(input.value),
+            0
+          );
+          if (cartCounter) {
+            cartCounter.textContent = `Panier (${totalQuantity})`;
+          }
+        }
+
+        // Gérer le clic sur le bouton diminuer
+        decreaseButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const input = button.nextElementSibling;
+            let value = parseInt(input.value);
+            if (value > 1) {
+              input.value = value - 1;
+              calculateProductTotal(input);
+            }
+          });
+        });
+
+        // Gérer le clic sur le bouton augmenter
+        increaseButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const input = button.previousElementSibling;
+            let value = parseInt(input.value);
+            const max = parseInt(input.getAttribute("max"));
+            if (value < max) {
+              input.value = value + 1;
+              calculateProductTotal(input);
+            }
+          });
+        });
+
+        // Gérer la saisie manuelle de quantité
+        quantityInputs.forEach((input) => {
+          input.addEventListener("change", () => {
+            let value = parseInt(input.value);
+            const min = parseInt(input.getAttribute("min"));
+            const max = parseInt(input.getAttribute("max"));
+
+            if (isNaN(value) || value < min) {
+              input.value = min;
+            } else if (value > max) {
+              input.value = max;
+            }
+
+            calculateProductTotal(input);
+          });
+        });
+
+        // Gérer la suppression d'un produit
+        removeButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const row = button.closest("tr");
+
+            // Animation de suppression
+            row.style.transition = "opacity 0.5s";
+            row.style.opacity = "0";
+
+            setTimeout(() => {
+              row.remove();
+              updateOrderSummary();
+              checkCartEmpty();
+            }, 500);
+          });
+        });
+
+        // Initialiser les totaux
+        quantityInputs.forEach((input) => {
+          calculateProductTotal(input);
+        });
+
+        // Vérifier si le panier est vide au chargement
+        checkCartEmpty();
+      });
+    </script>
+  </body>
+</html>
