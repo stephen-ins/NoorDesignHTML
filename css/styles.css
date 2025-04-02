@@ -112,6 +112,18 @@ h4,
   display: block;
 }
 
+/* Animation pour le menu mobile */
+
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+#mobile-menu.open {
+  max-height: 500px;
+}
+
 /* Styles pour les buttons */
 .btn-gold {
   background-color: var(--color-gold);
@@ -220,4 +232,83 @@ textarea:focus {
 .quantity-input {
   appearance: textfield;
   -moz-appearance: textfield;
+}
+
+/* ############### MEDIA QUERIES ############### */
+
+/* Réduction progressive de la taille du texte du menu de navigation */
+@media screen and (max-width: 1280px) {
+  #noorDesignTitle {
+    margin-bottom: 1.5rem;
+  }
+  nav .container {
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  nav .container > a {
+    margin-bottom: 0.75rem;
+  }
+
+  nav .container .hidden.md\:flex {
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  nav .container .hidden.md\:flex a {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  #noorDesignTitle {
+    margin-bottom: 1.25rem;
+  }
+  nav .container .hidden.md\:flex {
+    gap: 1rem;
+  }
+
+  nav .container .hidden.md\:flex a {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  #noorDesignTitle {
+    margin-bottom: 1rem;
+  }
+  nav .container .hidden.md\:flex {
+    gap: 0.75rem;
+  }
+
+  nav .container .hidden.md\:flex a {
+    font-size: 0.8rem;
+  }
+}
+
+/* Retour au menu burger en dessous de 1024 */
+@media screen and (max-width: 1024px) {
+  #noorDesignTitle {
+    margin-bottom: 0;
+  }
+  nav .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav .container > a {
+    margin-bottom: 0;
+  }
+
+  /* Faire un hidden de la nav pour faire place au M Burger */
+  nav .container .hidden.md\:flex {
+    display: none;
+  }
+
+  /* Faire apparaitre M Burger */
+  nav .container .md\:hidden {
+    display: block;
+  }
 }
