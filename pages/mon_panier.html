@@ -412,11 +412,9 @@
         </div>
 
         <!-- Récapitulatif et total -->
-        <div
-          class="flex flex-col md:flex-row md:justify-between md:items-start"
-        >
-          <!-- Coupon -->
-          <div class="w-full md:w-1/3 mb-8 md:mb-0">
+        <div class="flex flex-col md:flex-row md:justify-end md:items-start">
+          <!-- Coupon REDUCTION mesure conservatoire -->
+          <!-- <div class="w-full md:w-1/3 mb-8 md:mb-0">
             <h3 class="text-lg font-semibold text-gray-800 mb-4">Code promo</h3>
             <div class="flex items-center">
               <input
@@ -430,10 +428,10 @@
                 Appliquer
               </button>
             </div>
-          </div>
+          </div> -->
 
           <!-- Résumé de la commande -->
-          <div class="w-full md:w-1/3">
+          <div class="w-full md:w-1/3 ml-auto">
             <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
               <h3 class="text-lg font-semibold text-gray-800 mb-4">
                 Résumé de la commande
@@ -445,10 +443,14 @@
                   >219 €</span
                 >
               </div>
-
               <div class="flex justify-between py-2 border-b border-gray-200">
                 <span class="text-gray-600">Livraison</span>
-                <span class="font-medium text-gray-800">Gratuite</span>
+                <span class="font-medium text-gray-800" id="shipping">
+                  <span class="text-green-600">Gratuite</span>
+                  <span class="text-xs text-gray-500 block"
+                    >Dès 100€ d'achat</span
+                  >
+                </span>
               </div>
 
               <div class="flex justify-between py-2 mb-4">
