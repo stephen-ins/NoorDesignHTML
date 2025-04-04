@@ -81,25 +81,25 @@
           </form>
 
           <a
-          href="/pages/mon_profil.html"
-          class="text-gray-600 hover:text-gold transition"
-          title="Mon Profil"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+            href="/pages/mon_profil.html"
+            class="text-gray-600 hover:text-gold transition"
+            title="Mon Profil"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </a>
 
           <a
             href="inscription.html"
@@ -266,9 +266,11 @@
             <h2 class="text-3xl font-semibold text-gray-800 mb-4">
               Bracelet Harmonie
             </h2>
-            <small class="text-gray-400 italic block mb-2 opacity-90"
+
+            <!-- Affichage Ref produit en mesure conservatoire -->
+            <!-- <small class="text-gray-400 italic block mb-2 opacity-90"
               >Réf: ND-B2025-01</small
-            >
+            > -->
             <p class="text-gold font-extrabold text-xl mb-4">59 €</p>
             <p class="text-gray-600 mb-6">
               Un bracelet élégant et raffiné, parfait pour toutes les occasions.
@@ -362,9 +364,9 @@
       </div>
     </section>
 
-    <!-- Section vous aimeriez aussi -->
+    <!-- Section vous aimeriez aussi mesure conservatoire -->
 
-    <section class="py-12">
+    <!-- <section class="py-12">
       <div class="container mx-auto px-6">
         <h2 class="text-2xl font-semibold text-center text-gray-800 mb-8">
           Vous aimerez aussi
@@ -372,9 +374,9 @@
 
         <div
           class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center max-w-4xl mx-auto"
-        >
-          <!-- Similar Product 1 -->
-          <div
+        > -->
+    <!-- Similar Product 1 a 3 le faire en boucle ForEach -->
+    <!-- <div
             class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition w-full h-80 flex flex-col"
           >
             <a href="produit.html" class="flex flex-col h-full">
@@ -392,47 +394,9 @@
               </div>
             </a>
           </div>
-
-          <!-- Similar Product 2 -->
-          <div
-            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition w-full h-80 flex flex-col"
-          >
-            <a href="produit.html" class="flex flex-col h-full">
-              <img
-                src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                alt="Collier Lune"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 flex-grow flex flex-col justify-between">
-                <h3 class="text-lg font-medium text-gray-800">
-                  Collier Lune Dorée
-                </h3>
-                <p class="text-gold font-bold mt-1">68 €</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Similar Product 3 -->
-          <div
-            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition w-full h-80 flex flex-col"
-          >
-            <a href="produit.html" class="flex flex-col h-full">
-              <img
-                src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                alt="Boucles d'oreille Cascade"
-                class="w-full h-48 object-cover"
-              />
-              <div class="p-4 flex-grow flex flex-col justify-between">
-                <h3 class="text-lg font-medium text-gray-800">
-                  Boucles d'oreille Cascade
-                </h3>
-                <p class="text-gold font-bold mt-1">45 €</p>
-              </div>
-            </a>
-          </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer class="color-bg-footer text-gray-300 py-10">
