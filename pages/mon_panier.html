@@ -247,7 +247,6 @@
           >Explorer le catalogue</a
         >
       </div>
-
       <!-- Tableau du panier avec produits -->
       <div id="cart-content">
         <div class="overflow-x-auto">
@@ -262,7 +261,7 @@
               </tr>
             </thead>
             <tbody>
-              <!-- Exemple de produit 1 -->
+              <!-- Produit a mettre en boucle forEach -->
               <tr class="border-t border-gray-200">
                 <td class="py-4 px-4">
                   <div class="flex items-center">
@@ -275,7 +274,8 @@
                       <h3 class="font-medium text-gray-800">
                         Bracelet Harmonie
                       </h3>
-                      <p class="text-sm text-gray-500">Réf: ND-BR2025-01</p>
+                      <!-- REF mesure conservatoire -->
+                      <!-- <p class="text-sm text-gray-500">Réf: ND-BR2025-01</p> -->
                     </div>
                   </div>
                 </td>
@@ -312,79 +312,6 @@
                 </td>
                 <td class="py-4 px-4 text-center font-medium product-total">
                   59 €
-                </td>
-                <td class="py-4 px-4 text-center">
-                  <button
-                    class="text-red-500 hover:text-red-700 transition remove-item"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                      />
-                    </svg>
-                  </button>
-                </td>
-              </tr>
-
-              <!-- Exemple de produit 2 -->
-              <tr class="border-t border-gray-200">
-                <td class="py-4 px-4">
-                  <div class="flex items-center">
-                    <img
-                      src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                      alt="Collier Perle de Rosée"
-                      class="w-16 h-16 object-cover rounded mr-4"
-                    />
-                    <div>
-                      <h3 class="font-medium text-gray-800">
-                        Collier Perle de Rosée
-                      </h3>
-                      <p class="text-sm text-gray-500">Réf: ND-C2025-01</p>
-                    </div>
-                  </div>
-                </td>
-                <td class="py-4 px-4 text-center">
-                  <span class="text-gray-700">80 €</span>
-                </td>
-                <td class="py-4 px-4 text-center">
-                  <div class="flex items-center justify-center">
-                    <div
-                      class="flex items-center border border-gray-300 rounded-full overflow-hidden"
-                    >
-                      <button
-                        type="button"
-                        class="px-3 py-1 bg-gray-100 text-gray-600 hover:bg-gray-200 transition quantity-decrease"
-                      >
-                        -
-                      </button>
-                      <input
-                        type="number"
-                        class="quantity-input w-12 text-center border-0 focus:outline-none"
-                        min="1"
-                        max="10"
-                        value="2"
-                        data-price="80"
-                      />
-                      <button
-                        type="button"
-                        class="px-3 py-1 bg-gray-100 text-gray-600 hover:bg-gray-200 transition quantity-increase"
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                </td>
-                <td class="py-4 px-4 text-center font-medium product-total">
-                  160 €
                 </td>
                 <td class="py-4 px-4 text-center">
                   <button
